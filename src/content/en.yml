@@ -5,14 +5,11 @@ meta:
   short: EN
   locale: en_US
   site_name: INORI Finance
-
 nav:
   skip: Skip to content
-  product: DPN Platform
+  product: NEVO platform
   solutions: Solutions
-  payers: For payers
   suppliers: For suppliers
-  funders: For funders
   services: Services
   technology: Technology
   about: About
@@ -22,7 +19,7 @@ nav:
   menu: Menu
   close: Close
   language: Language
-
+  buyers: For buyers
 common:
   learn_more: Learn more
   watch_video: Watch the video
@@ -32,335 +29,358 @@ common:
   coming_soon: Platform screenshots coming soon
   back_home: Back to home
   close: Close
-  lang_suggest: "This site is also available in English."
+  lang_suggest: This site is also available in English.
   lang_suggest_btn: Switch to English
   dismiss: Dismiss
-
 footer:
-  tagline: Blockchain-powered factoring for supplier payments in Israel.
+  tagline: NEVO by INORI Finance. Reverse factoring for buyer-approved invoices.
   explore: Explore
   company: Company
   legal: Legal
   contact: Contact
-  license: "Operating with the approval of the Israel Capital Market Authority · Licenses No. 70208 and 70210"
-  disclaimer: "The information on this website is general and does not constitute investment, financial, legal, tax or credit advice, or an offer of any financial product. Any service is subject to an agreement and to applicable regulation."
+  license: Operating with the approval of the Israel Capital Market Authority · Licenses No. 70208 and 70210
+  disclaimer: Information on this site is general and does not constitute financial, regulatory, legal, tax, investment or personal credit advice. Financing is subject to individual review, required documents, approval and agreed terms.
   rights: All rights reserved.
   location: Petah Tikva, Israel
-
 legal_nav:
   terms: Terms of use
   privacy: Privacy policy
   accessibility: Accessibility statement
   regulatory: Regulatory information
-
 home:
-  title: "INORI Finance — Digital Payment Notes for supplier payments"
-  description: "INORI's DPN platform turns supplier payment obligations into digital payment notes on a blockchain ledger — so suppliers can get paid early and funders can invest in verified receivables."
+  title: INORI Finance | NEVO, reverse factoring with Digital Payment Notes
+  description: NEVO by INORI Finance turns a buyer-approved invoice into a Digital Payment Note (DPN). Suppliers can ask INORI for early payment, and the buyer still pays on the original due date.
   hero:
-    eyebrow: Licensed fintech · Israel
-    title: "Supplier payments, transformed into liquidity."
-    subtitle: "The Digital Payment Note (DPN) platform turns approved supplier payments into digital notes on a blockchain ledger — so suppliers get paid early, payers keep their terms, and funders invest in verified receivables."
-    cta_primary: Get started
-    cta_secondary: How DPN works
+    eyebrow: NEVO by INORI Finance
+    title: Suppliers get paid sooner. Buyers pay on schedule.
+    subtitle: It all starts with an invoice your buyer has already approved. You can ask INORI to pay you early, and your buyer still pays on the date you agreed.
+    cta_primary: Talk to INORI
+    cta_secondary: See how it works
   trust:
-    - Licensed by the Capital Market Authority
-    - Official Israeli partner of Soramitsu
-    - Built on Hyperledger Iroha
-    - Featured in Calcalist, TheMarker, Israel Hayom
+  - Operating with the approval of the Capital Market Authority, licences 70208 and 70210
+  - Soramitsu's representative in Israel
+  - Runs on SORA Nexus with Hyperledger Iroha v3
+  - Featured in Calcalist, TheMarker and Israel Hayom
   problem:
-    eyebrow: The problem
-    title: "Suppliers wait months to get paid."
-    text: "Long payment terms tie up working capital across the supply chain. Invoices sit in queues, financing is slow and paper-heavy, and small suppliers carry the cost of waiting."
+    eyebrow: The gap
+    title: The work is done. The money is still on its way.
+    text: Suppliers often finish a job months before they get paid. Until the due date comes around, the money they've already earned just sits in someone else's payment queue.
   solution:
-    eyebrow: The solution
-    title: "One digital note. Liquidity on day one."
-    text: "With DPN, the payer issues a digital payment note for an approved invoice. The supplier can hold it to maturity or sell it to a funder for early payment — with every step recorded on a tamper-proof ledger."
+    eyebrow: Our approach
+    title: Once the buyer approves the invoice, it becomes a clear obligation.
+    text: NEVO turns that approved invoice into a Digital Payment Note (DPN). The supplier can wait for the due date, or ask INORI to pay early. If INORI approves and the supplier is happy with the terms, INORI transfers the money, and the buyer still pays on the original date.
   how:
     eyebrow: How it works
-    title: "From invoice to early payment in four steps"
+    title: Reverse factoring in four steps
     steps:
-      - title: The payer issues a DPN
-        text: "An approved supplier payment is issued as a digital payment note and recorded on the blockchain ledger."
-      - title: The supplier receives it
-        text: "The note is transferred to the supplier with a clear amount, maturity date and full audit trail."
-      - title: Early payment from a funder
-        text: "The supplier can sell the note to a bank or factoring company and receive cash immediately. The change of ownership is recorded on the ledger."
-      - title: Settlement at maturity
-        text: "On the due date the payer pays the current holder of the note. The full history stays verifiable."
+    - title: The buyer approves the invoice
+      text: The buyer confirms who the supplier is, the amount and the due date. NEVO records all of it in a Digital Payment Note (DPN) and issues it to the supplier.
+    - title: The supplier decides
+      text: Keep the DPN until the due date, or ask INORI for early payment. An approved invoice doesn't automatically mean approved funding.
+    - title: INORI reviews and pays
+      text: INORI looks at the request. If it's approved and the supplier accepts the terms, INORI pays by bank transfer, checks the bank evidence, and the DPN is transferred to INORI.
+    - title: The buyer pays on the due date
+      text: On the original due date, the buyer pays whoever owns the DPN at that point. Once the payment is matched, the DPN is marked as settled.
   audiences:
     eyebrow: Who it's for
-    title: "One platform, three sides of every payment"
+    title: Built around both sides of the invoice
     items:
-      - key: payers
-        title: Payers
-        subtitle: Corporates & public bodies
-        text: "Support your suppliers without changing your payment terms, with full visibility of every obligation."
-      - key: suppliers
-        title: Suppliers
-        subtitle: SMEs and service providers
-        text: "Turn approved payments into cash when you need it, instead of waiting until the due date."
-      - key: funders
-        title: Funders
-        subtitle: Banks & factoring companies
-        text: "Access a stream of verified, payer-backed receivables with transparent ownership and history."
+    - key: suppliers
+      img: home_audience-suppliers
+      url: solutions/suppliers/
+      title: Suppliers
+      subtitle: Service providers and vendors
+      text: Ask for early payment on invoices your buyer has approved. You see the terms before you commit, and waiting for the due date is always an option.
+    - key: buyers
+      img: home_audience-payers
+      url: solutions/buyers/
+      title: Buyers
+      subtitle: Companies that pay supplier invoices
+      text: Help your suppliers get paid sooner without moving your own payment date.
+    - key: inori
+      img: home_audience-funders
+      url: dpn/
+      title: INORI
+      subtitle: The funder
+      text: We review each request, pay approved suppliers by bank transfer, and collect from the buyer on the due date.
   principles:
     eyebrow: How we work
-    title: "Clarity, stability and discretion"
+    title: Clarity, stability and discretion
     items:
-      - icon: chat
-        title: Calm and focused guidance
-        text: "We work behind the scenes, in full coordination with all parties — without noise, with results."
-      - icon: ledger
-        title: Systemic thinking
-        text: "We analyse the complexity, map the regulatory structure and build a tailored approach."
-      - icon: invoice
-        title: Execution, not just advice
-        text: "We handle documents, follow processes and make sure things actually move — at every stage."
-      - icon: shield
-        title: Full regulatory compliance
-        text: "We work within legal requirements and find flexible solutions inside the rules."
+    - icon: chat
+      title: Calm, focused guidance
+      text: We work behind the scenes and stay coordinated with everyone involved. No noise, just results.
+    - icon: ledger
+      title: Seeing the whole system
+      text: We dig into the details, work out the regulatory picture and build an approach that fits.
+    - icon: invoice
+      title: We do the work, not just advise
+      text: We handle the paperwork, keep track of every process and make sure things keep moving.
+    - icon: shield
+      title: Fully compliant
+      text: We stay within the law and find flexible solutions inside the rules.
   services:
     eyebrow: Services
-    title: "Expertise around the platform"
-    text: "Beyond DPN, our team supports institutions with licensing, payment-process design and implementation."
-  press:
-    eyebrow: In the press
-    title: "What they say about us"
+    title: Financial and regulatory services
+    text: Beyond NEVO, INORI offers tailored financial and regulatory services to government bodies, institutions and businesses, from strategy all the way to execution.
   faq:
     eyebrow: FAQ
-    title: Frequently asked questions
+    title: Questions we hear often
     items:
-      - q: What is a Digital Payment Note (DPN)?
-        a: "A DPN is a digital record of a payer's commitment to pay a supplier a set amount on a set date. It is issued and tracked on a blockchain ledger, so ownership and history are always verifiable."
-      - q: How does a supplier get paid early?
-        a: "Once the supplier holds a DPN, it can sell the note to a participating funder and receive payment before the due date. At maturity, the payer pays the funder."
-      - q: Does the payer have to change its payment terms?
-        a: "No. The payer keeps its existing terms and pays on the original due date — to whoever holds the note at that time."
-      - q: What happens after I leave my details?
-        a: "We schedule a short, free and non-binding introductory call to understand your needs and suggest next steps."
-      - q: Is my inquiry confidential?
-        a: "Yes. All inquiries are handled in full confidence and nothing is shared with any party without your explicit consent."
+    - q: What is reverse factoring?
+      a: It starts with the buyer. The buyer approves the invoice, the supplier can ask for early payment, and on the due date the buyer pays whoever owns the payment at that point. In NEVO, that obligation and its ownership are recorded as a DPN.
+    - q: Does the buyer have to pay earlier?
+      a: No. The buyer pays on the original due date. If the DPN has been transferred to INORI, the buyer simply pays INORI instead of the supplier, under the terms of the transaction.
+    - q: Does the supplier have to take early payment?
+      a: Not at all. The supplier can ask for funding or just wait for the due date. Any funding depends on eligibility, review, approval and the agreed terms.
+    - q: Is every approved invoice funded?
+      a: No. An approved invoice is not the same as approved funding. INORI reviews every company and every invoice, and the supplier sees the terms before deciding whether to go ahead.
+    - q: What happens after I leave my details?
+      a: We'll set up a short, free call with no obligation, to understand what you need and suggest the next steps.
+    - q: Is my inquiry confidential?
+      a: Yes. Every inquiry is handled in full confidence, and we never share anything with anyone without your explicit consent.
   cta:
-    title: "Ready to unlock your supply chain's liquidity?"
-    text: "Tell us whether you pay, supply or fund — we'll show you how DPN fits."
-    button: Get started
-
+    title: It starts with one approved invoice.
+    text: Tell us if you're a supplier or a buyer, and we'll show you how NEVO works for you.
+    button: Talk to INORI
+  press:
+    eyebrow: In the press
+    title: What they say about us
 dpn:
-  title: "DPN Platform — Digital Payment Notes on blockchain | INORI"
-  description: "The DPN platform issues, transfers and settles digital payment notes on a blockchain ledger, enabling supplier factoring with full transparency."
+  title: NEVO by INORI Finance | Digital Payment Notes and reverse factoring
+  description: NEVO turns a buyer-approved invoice into a Digital Payment Note (DPN). After review and agreed terms, INORI can pay the supplier early while the buyer keeps the original payment date.
   hero:
-    eyebrow: The platform
-    title: "Digital Payment Notes, on a ledger you can trust."
-    subtitle: "A blockchain-powered factoring platform that turns approved supplier payments into transferable digital notes."
+    eyebrow: NEVO by INORI Finance
+    title: One approved invoice. One clear payment record.
+    subtitle: NEVO turns a buyer-approved invoice into a Digital Payment Note (DPN). After review and agreed terms, INORI can pay the supplier early, and the buyer keeps the original payment date.
   what:
-    eyebrow: What is DPN
-    title: "A payment promise, made digital and transferable"
+    eyebrow: What is a DPN
+    title: A digital record of a payment that's been approved
     paragraphs:
-      - "A Digital Payment Note represents a payer's commitment to pay an approved amount to a supplier on a fixed date. Instead of a paper promissory note or an invoice waiting in a queue, it is issued as a digital asset on a permissioned blockchain ledger."
-      - "Because the note can be transferred, the supplier can sell it to a funder and receive cash early. Every issuance, transfer and settlement is recorded — creating a single, verifiable source of truth for all parties."
-  platform:
-    eyebrow: Inside the platform
-    title: "Built for payers, suppliers and funders"
-    text: "Each participant gets a dedicated workspace to issue, receive, trade and settle notes."
-  benefits:
-    eyebrow: Why DPN
+    - A Digital Payment Note (DPN) is created the moment a buyer approves a supplier's invoice. It holds the approved payment in a single record that the buyer, the supplier and INORI all see.
+    - Every DPN has a serial number, the legal names and registration numbers of the buyer and supplier, the amount in shekels, when it was issued, the due date, who owns it right now and what state it's in.
+    states_title: The life of a DPN
+    states:
+    - Awaiting buyer approval
+    - Issuance pending
+    - Active
+    - Pending settlement
+    - Settled
+    states_note: If there's a dispute, the DPN can be marked as disputed or frozen, and nothing moves forward until it's resolved.
+  modes:
+    eyebrow: Two ways to use NEVO
+    title: Led by the buyer, or started by the supplier
     items:
-      - icon: clock
-        title: Faster liquidity
-        text: "Suppliers can turn approved payments into cash without waiting for the due date."
-      - icon: ledger
-        title: Single source of truth
-        text: "Issuance, ownership and settlement are recorded on a shared, tamper-proof ledger."
-      - icon: search
-        title: Full transparency
-        text: "Payers, suppliers and funders see the same verified status of every note."
-      - icon: scales
-        title: Regulated framework
-        text: "Operated by a company licensed by the Israel Capital Market Authority."
+    - icon: tower
+      title: Reverse factoring (buyer-led)
+      text: The buyer approves the invoice. The supplier can ask for early payment, and on the due date the buyer pays whoever owns the DPN.
+    - icon: supplier
+      title: Factoring (supplier-led)
+      text: A supplier can also ask for funding against an eligible, active DPN it owns. The other party has to agree, and INORI reviews the request before any money is sent.
+    - icon: ledger
+      title: One record for both sides
+      text: Approvals, ownership, funding steps and proof of payment all stay together, from the first approval to the final payment.
+  benefits:
+    supplier_title: For suppliers
+    supplier:
+    - The option to get paid sooner on an approved invoice, after review and agreed terms.
+    - You see the terms and every step before you accept anything.
+    - Follow the approval, INORI's review, the payment, the ownership transfer and settlement in one place.
+    - Don't need the money early? Just wait for the due date.
+    buyer_title: For buyers
+    buyer:
+    - Help suppliers get paid sooner without paying any earlier yourself.
+    - The amount and due date you approved stay fixed in a shared record.
+    - Invoice approvals, sign-offs, ownership and proof of payment, all in one place.
+    - A program you can repeat with the suppliers and invoices that qualify.
+  platform:
+    eyebrow: Inside NEVO
+    title: One workspace for buyers and suppliers
+    text: Companies use a single portal to approve invoices, issue DPNs, ask for factoring and keep track of what's owed, what's been paid and what's settled.
+    features:
+    - An approvals inbox, with sign-off from more than one person where needed
+    - Two-factor authentication for sensitive actions, plus role-based access
+    - You always see whether a transaction is pending, final or failed
+    - A built-in explorer to look up any DPN, transaction or company
   security:
-    eyebrow: Security & compliance
-    title: "Immutable records. Verified ownership."
-    text: "DPN runs on Hyperledger Iroha, an enterprise-grade permissioned blockchain. Only authorised participants can transact, and every change of ownership is permanently recorded."
+    eyebrow: Technology and controls
+    title: The ledger tracks ownership. The money moves through banks.
+    text: SORA Nexus, built on Hyperledger Iroha v3, records every change in a DPN's state and ownership. INORI's payments and the buyer's payment go through regular bank transfers outside the blockchain, and the proof is then recorded and matched in NEVO.
     points:
-      - Permissioned network with identified participants
-      - Tamper-proof history of every note
-      - Clear ownership at every moment
-      - Designed to support regulatory and audit requirements
+    - A DPN moves to INORI only after INORI has checked the bank evidence and signed that specific transfer.
+    - A DPN is marked as settled only after the payment proof is matched and INORI approves it.
+    - Signing keys are created, encrypted and used on the customer's own device. No outside custodian holds them.
+    - Only verified, authorised company users can take actions on the platform.
+  onboarding:
+    eyebrow: Getting started
+    title: How a company joins NEVO
+    steps:
+    - title: Open a company account
+      text: Enter your company's registration details and the work e-mail of an authorised representative.
+    - title: Verify the company
+      text: Add details of your authorised representatives and owners, and upload the company, bank and ID documents we ask for.
+    - title: Send it to INORI for review
+      text: Once INORI approves your company, you can start adding invoices.
+    note: An approved account or an approved invoice doesn't guarantee funding. INORI looks at every request and agrees the amount, fees and terms with you.
+  faq:
+  - q: What does the blockchain actually do?
+    a: SORA Nexus, built on Hyperledger Iroha v3, is the ledger where each DPN's state and ownership are recorded. The money itself, INORI's funding and the buyer's payment, moves through regular bank transfers. The proof is then recorded and matched in NEVO.
+  - q: Can a supplier ask for factoring directly?
+    a: Yes, if it owns an eligible, active DPN. The company needs to be verified, the other party has to agree, and INORI reviews the request before sending any money.
+  - q: What if an invoice is paid late or disputed?
+    a: That's covered by the agreements for that specific transaction, including who repays the advance and what happens while the dispute is sorted out. Go over these terms with INORI before you accept funding.
+  - q: Who can see my company and invoice details?
+    a: Only authorised users have access in NEVO. To learn how INORI handles personal and company information, see our privacy policy or get in touch.
   video:
-    title: "See DPN in action"
-    text: "A short walkthrough of how a digital payment note moves from payer to supplier to funder."
-
+    title: Watch the DPN video
+    text: ''
 solutions:
-  payers:
-    title: "DPN for payers — corporates and public bodies | INORI"
-    description: "Support your suppliers with early payment while keeping your payment terms and full visibility."
+  buyers:
+    title: NEVO for buyers | INORI Finance
+    description: Help your suppliers get paid sooner while you keep your agreed payment date.
     hero:
-      eyebrow: For payers
-      title: "Strengthen your supply chain without changing your terms."
-      subtitle: "Corporates and public bodies use DPN to give suppliers access to early payment — while paying on the original due date."
-    intro: "Long payment terms protect your cash flow but strain your suppliers. DPN lets you keep both: you issue a digital note for each approved payment, and your suppliers decide when to turn it into cash."
+      eyebrow: For buyers
+      title: Keep your payment date. Give suppliers a choice.
+      subtitle: Approve the invoice once. Your suppliers can ask INORI to pay them early, and you still pay on the original due date.
+    intro: 'Reverse factoring starts with something both of you already agree on: an approved invoice. When you approve it, NEVO records it as a DPN with a clear buyer, supplier, amount and due date. If INORI pays the supplier early, the DPN moves to INORI, so on the due date you pay INORI instead. Same amount, same date.'
     benefits:
-      - icon: tower
-        title: Keep your payment terms
-        text: "You pay on the agreed due date — to the current holder of the note."
-      - icon: search
-        title: Full visibility
-        text: "Track every issued note, its holder and its status in one place."
-      - icon: supplier
-        title: Healthier suppliers
-        text: "Suppliers with access to liquidity are more stable and reliable partners."
-      - icon: invoice
-        title: Less paperwork
-        text: "Replace manual confirmations and paper notes with a digital, auditable process."
-    flow_title: "Your role in the flow"
+    - icon: clock
+      title: Your date stays the same
+      text: You never pay early. You pay on the due date you approved.
+    - icon: invoice
+      title: Approve it once
+      text: The amount and due date you confirm stay fixed in the shared record.
+    - icon: search
+      title: Always know who to pay
+      text: The record shows who owns each DPN right now and where the payment should go.
+    - icon: supplier
+      title: Happier suppliers
+      text: Your suppliers get an optional way to access their money sooner.
+    flow_title: What you do
     flow:
-      - "Approve the supplier's invoice as usual."
-      - "Issue a DPN for the approved amount and due date."
-      - "Pay the holder of the note on maturity."
+    - Approve the supplier's invoice, with the amount and due date.
+    - NEVO issues the DPN to the supplier.
+    - On the due date, pay whoever owns the DPN, following the instructions.
   suppliers:
-    title: "DPN for suppliers — get paid early | INORI"
-    description: "Turn approved payments into cash when you need it instead of waiting months."
+    title: NEVO for suppliers | INORI Finance
+    description: Ask for early payment on invoices your buyer has approved, or wait for the due date. It's up to you.
     hero:
       eyebrow: For suppliers
-      title: "Your approved payments, available when you need them."
-      subtitle: "Receive a digital payment note from your customer and choose: hold it to maturity or sell it for early payment."
-    intro: "Waiting 60, 90 or 120 days for payment slows growth. With DPN, an approved payment becomes a digital note you can turn into cash — backed by your customer's commitment, not by your own balance sheet."
+      title: Your work is done. Why wait months to get paid?
+      subtitle: Once your buyer approves the invoice, you can ask INORI to pay you early, or just wait for the due date.
+    intro: You've already done the work. NEVO lets you turn an approved invoice into a clear request for early payment. You see the terms before you decide, and you can follow every step until the money arrives and the invoice is settled. Funding is optional and depends on INORI's review and the agreed terms.
     benefits:
-      - icon: clock
-        title: Get paid early
-        text: "Sell your note to a participating funder and receive cash before the due date."
-      - icon: note
-        title: Clear and verifiable
-        text: "Amount, due date and payer are recorded on the ledger — no disputes about what was approved."
-      - icon: chart
-        title: Plan your growth
-        text: "Predictable cash flow helps you take on new orders and projects."
-      - icon: exchange
-        title: Your choice
-        text: "Decide per note whether to wait or receive early payment."
-    flow_title: "Your role in the flow"
+    - icon: clock
+      title: Get paid sooner
+      text: Ask for funding on an approved invoice, after review and agreed terms.
+    - icon: search
+      title: See the terms first
+      text: You know the terms and the next steps before you accept anything.
+    - icon: ledger
+      title: Everything in one place
+      text: Follow the approval, the review, the payment, the transfer and settlement.
+    - icon: exchange
+      title: It's your call
+      text: Rather wait? Keep the DPN until the due date.
+    flow_title: What you do
     flow:
-      - "Deliver and invoice your customer as usual."
-      - "Receive a DPN once the payment is approved."
-      - "Hold it, or sell it to a funder for early payment."
-  funders:
-    title: "DPN for funders — banks and factoring companies | INORI"
-    description: "Invest in verified, payer-backed receivables with transparent ownership."
-    hero:
-      eyebrow: For funders
-      title: "Verified receivables, with ownership you can see."
-      subtitle: "Banks and factoring companies use DPN to finance supplier payments backed by approved payer commitments."
-    intro: "Traditional factoring relies on documents that are hard to verify and easy to duplicate. DPN gives you notes whose issuance, ownership and settlement are recorded on a shared ledger — reducing operational risk and verification effort."
-    benefits:
-      - icon: vault
-        title: Payer-backed assets
-        text: "Each note represents an approved payment commitment by an identified payer."
-      - icon: ledger
-        title: No double financing
-        text: "A single ledger record means a note cannot be sold twice."
-      - icon: search
-        title: Faster due diligence
-        text: "Verify amount, payer, maturity and ownership history instantly."
-      - icon: chart
-        title: Scalable deal flow
-        text: "Access notes across many suppliers through one platform."
-    flow_title: "Your role in the flow"
-    flow:
-      - "Review available notes and their payers."
-      - "Purchase notes and pay suppliers early."
-      - "Receive payment from the payer at maturity."
-
+    - Add the invoice. Once your buyer approves it, a DPN is issued to you.
+    - Choose whether to wait for the due date or ask INORI to pay early.
+    - If it's approved and you accept the terms, INORI pays you by bank transfer.
 services:
-  title: "Services — regulation, payment processes and implementation | INORI"
-  description: "Regulatory and licensing support, payment-cycle optimisation and implementation services from INORI."
+  title: Services | Regulation, banking and execution | INORI
+  description: Regulatory and licensing support, payment-cycle optimisation and implementation services from INORI.
   hero:
     eyebrow: Services
-    title: "From strategy to execution."
-    subtitle: "Tailored financial and regulatory services for government bodies, institutions and businesses — with clarity, stability and discretion."
+    title: From strategy to getting it done.
+    subtitle: Tailored financial and regulatory services for government bodies, institutions and businesses, delivered with clarity, stability and discretion.
   items:
-    - img: services_regulatory
-      title: Regulatory & licensing support
-      text: "We guide institutions through the regulatory landscape of payments and digital assets — from structuring to working with regulators and banks."
-      points:
-        - Regulatory mapping and structuring
-        - Licensing processes and documentation
-        - Coordination with regulators and banks
-    - img: services_optimization
-      title: Payment-cycle & working-capital optimisation
-      text: "We analyse how money moves between you and your suppliers and redesign the process to free working capital."
-      points:
-        - Analysis of payment terms and flows
-        - Supply-chain finance programme design
-        - Onboarding of suppliers and funders
-    - img: services_integration
-      title: Implementation & integration
-      text: "We work with your finance and IT teams to connect DPN to your existing processes and systems."
-      points:
-        - Process and integration planning
-        - Pilot setup and rollout
-        - Ongoing operational support
-  note: "We work alongside your accountants and lawyers — not instead of them — and lead the practical process with banking and regulatory bodies."
-
+  - img: services_regulatory
+    title: Regulatory and banking processes
+    text: We take the lead on the practical work with banks and regulators, and keep everyone involved on the same page.
+    points:
+    - Mapping out the regulatory picture
+    - Working with banks, regulators and government bodies
+    - Staying fully within the law
+  - img: services_optimization
+    title: Strategy and structuring
+    text: We break down the complexity, make sense of the regulation and build a plan that fits your situation.
+    points:
+    - A clear look at where you stand and your options
+    - A plan of action made for you
+    - Flexible solutions inside the rules
+  - img: services_integration
+    title: Execution and paperwork
+    text: We don't stop at advice. We prepare the documents, keep an eye on every process and make sure things actually move.
+    points:
+    - Preparing and handling documents
+    - Following the process at every stage
+    - Keeping you updated until it's done
+  note: We don't replace your accountant or lawyer. We work alongside them and handle the practical process with banks and regulators.
 technology:
-  title: "Technology — Hyperledger Iroha and Soramitsu | INORI"
-  description: "DPN is built on Hyperledger Iroha, in strategic partnership with Soramitsu."
+  title: Technology | SORA Nexus and Hyperledger Iroha v3 | INORI
+  description: NEVO records DPN state and ownership on SORA Nexus, built on Hyperledger Iroha v3 technology developed by Soramitsu.
   hero:
     eyebrow: Technology
-    title: "Enterprise blockchain, designed for finance."
-    subtitle: "DPN runs on Hyperledger Iroha — a permissioned distributed ledger built for regulated financial infrastructure."
+    title: Solid technology behind every payment.
+    subtitle: NEVO records the state and ownership of every DPN on SORA Nexus, built on Hyperledger Iroha v3.
   ledger:
-    eyebrow: The ledger
-    title: "Why a distributed ledger?"
-    text: "Factoring depends on trust: that a payment was approved, that a note exists only once, and that its owner is who they claim to be. A shared ledger gives every participant the same verified record — without relying on emails, spreadsheets or paper."
+    eyebrow: What the ledger does
+    title: One record everyone can follow
+    text: Authorised users can follow the invoice, approvals, funding status and payment instructions in one place. The ledger keeps the full history of each DPN's state and ownership, while the money itself moves through banks.
     points:
-      - icon: ledger
-        title: Shared record
-        text: "All authorised parties see the same state of every note."
-      - icon: shield
-        title: Tamper-proof
-        text: "History cannot be altered after the fact."
-      - icon: exchange
-        title: Instant transfer
-        text: "Ownership moves between parties in a single recorded step."
+    - icon: ledger
+      title: One approved obligation
+      text: The amount, the parties, their consent, the due date and the status stay linked together.
+    - icon: exchange
+      title: A clear ownership history
+      text: Each transfer is recorded once INORI has checked the bank evidence and signed it.
+    - icon: shield
+      title: Proof of payment
+      text: Payment proof is matched to the transaction, so everyone with access can see when it's settled.
   iroha:
-    title: Hyperledger Iroha
-    text: "An open-source, permissioned blockchain under the Linux Foundation's Hyperledger project, designed for digital assets, identity and payment systems in regulated environments."
+    title: SORA Nexus and Hyperledger Iroha v3
+    text: 'Hyperledger Iroha is open-source distributed ledger technology, and Soramitsu has played a central role in building it. NEVO uses SORA Nexus, built on Iroha v3, as the ledger for DPNs. You never have to deal with the blockchain directly: companies simply work in a web portal.'
   partnership:
     eyebrow: Strategic partnership
-    title: "In partnership with Soramitsu"
-    text: "INORI is the official Israeli partner of Soramitsu, a leading developer of blockchain-based financial infrastructure and central bank digital currency systems, and a core developer of Hyperledger Iroha. The partnership brings proven technology and international standards for security, privacy and interoperability to the Israeli market."
-
+    title: INORI represents Soramitsu in Israel
+    text: Soramitsu is a Japanese fintech company, founded in Tokyo in 2016, that builds blockchain-based solutions for digital assets, digital identity and financial infrastructure. Together with the National Bank of Cambodia, it developed and runs Bakong, Cambodia's national blockchain-based payment system. INORI represents Soramitsu in Israel.
 about:
-  title: "About INORI Finance"
-  description: "INORI is a licensed Israeli fintech building blockchain-based payment infrastructure, in partnership with Soramitsu."
+  title: About INORI Finance
+  description: INORI is an Israeli financial services company. We run NEVO, a reverse factoring platform, and represent Soramitsu in Israel.
   hero:
     eyebrow: About us
-    title: "A new financial vision."
-    subtitle: "Finance is a service — and the end user is at the centre."
+    title: A new financial vision.
+    subtitle: Finance is a service, and the end user is at the centre.
   story:
     title: Who we are
     paragraphs:
-      - "INORI is a strategy and technology team focused on digital payment infrastructure, financial regulation and blockchain applications. We provide tailored financial and regulatory services to government bodies, institutions and businesses — and build the DPN platform for supplier payments."
-      - "Our team brings together advisors with financial, legal and regulatory backgrounds, lawyers specialising in digital assets and payment regulation, and technologists experienced in distributed-ledger projects on Hyperledger Iroha."
-      - "Through our strategic partnership with Soramitsu, we bring international standards of security, privacy and interoperability — to deliver a financial service layer that is transparent, precise, calm and efficient."
+    - INORI is a strategy and technology team working on digital payment infrastructure, financial regulation and blockchain applications. We provide tailored financial and regulatory services to government bodies, institutions and businesses, and we run NEVO, our reverse factoring platform for buyer-approved invoices.
+    - Our team includes advisors with financial, legal and regulatory backgrounds, lawyers who specialise in digital assets and payment regulation, and technologists who have worked on distributed ledger projects built on Hyperledger Iroha.
+    - Through our strategic partnership with Soramitsu, we bring international standards of security, privacy and interoperability to Israel, so we can offer a financial service that is transparent, precise, calm and efficient.
   team:
     eyebrow: Leadership
-    title: "Partners on the journey"
+    title: Partners on the journey
     people:
-      kobi: { name: Kobi Shmueli, role: "CEO & Founder, INORI" }
-      makoto: { name: "Makoto Takemiya, PhD", role: "CEO & Co-Founder, Soramitsu" }
-      emiliano: { name: Emiliano Rachkovsky, role: "Co-Founder & CTO · Regional Lead for Israel & Latin America, Soramitsu" }
+      kobi:
+        name: Kobi Shmueli
+        role: CEO & Founder, INORI
+      makoto:
+        name: Makoto Takemiya, PhD
+        role: CEO & Co-Founder, Soramitsu
+      emiliano:
+        name: Emiliano Rachkovsky
+        role: Co-Founder & CTO · Regional Lead for Israel & Latin America, Soramitsu
   license:
     title: Licensed and regulated
-    text: "INORI operates with the approval of the Israel Capital Market Authority under licenses No. 70208 and 70210."
-
+    text: INORI is an Israeli financial services company operating with the approval of the Capital Market, Insurance and Savings Authority, under licences No. 70208 and 70210.
 press:
-  title: "Press & media | INORI"
-  description: "INORI in the media — articles and videos."
+  title: Press & media | INORI
+  description: "INORI in the media: articles and videos."
   hero:
     eyebrow: Press
-    title: "INORI in the media."
-    subtitle: "Coverage of INORI, DPN and our partnership with Soramitsu."
+    title: INORI in the media.
+    subtitle: Coverage of INORI, DPN and our partnership with Soramitsu.
   articles_title: Articles
   videos_title: Videos
   videos:
@@ -370,14 +390,13 @@ press:
     privacy: Our privacy
     learning: The learning process
     update: INORI update
-
 contact:
-  title: "Contact INORI — get started with DPN"
-  description: "Talk to INORI about DPN, supplier finance and regulatory services."
+  title: Contact INORI | Get started with NEVO
+  description: Talk to INORI about DPN, supplier finance and regulatory services.
   hero:
     eyebrow: Contact
-    title: "It all starts with a short conversation."
-    subtitle: "Tell us a little about you and we'll get back to you."
+    title: It all starts with a short conversation.
+    subtitle: Tell us a little about you and we'll get back to you.
   form:
     name: Full name
     company: Company / organisation
@@ -385,17 +404,16 @@ contact:
     phone: Phone
     role: I am a…
     role_options:
-      payer: "Payer (corporate / public body)"
       supplier: Supplier
-      funder: "Funder (bank / factoring company)"
+      buyer: Buyer (a company that pays supplier invoices)
       partner: Technology or business partner
       other: Other
     message: How can we help?
-    consent: "I agree to the processing of my details in accordance with the"
+    consent: I agree to the processing of my details in accordance with the
     consent_link: privacy policy
     submit: Send
     sending: Sending…
-    error: "Something went wrong. Please try again or e-mail us directly."
+    error: Something went wrong. Please try again or e-mail us directly.
     required: required
   details:
     title: Contact details
@@ -404,64 +422,62 @@ contact:
     whatsapp: WhatsApp
     location: Location
   thanks:
-    title: "Thank you — we've received your message."
-    text: "We'll get back to you shortly to schedule a short introductory call."
-
+    title: Thank you, we've received your message.
+    text: We'll get back to you shortly to schedule a short introductory call.
 legal:
-  updated: "Last updated: November 2026"
+  updated: 'Last updated: November 2026'
   terms:
     title: Terms of use
     sections:
-      - h: General
-        p: "This website is operated by INORI Finance Ltd. (\"INORI\"). By using the website you agree to these terms. If you do not agree, please do not use the website."
-      - h: Information only
-        p: "The content of the website is provided for general information only. It does not constitute investment, financial, legal, tax or credit advice, nor an offer or solicitation to purchase any financial product. Any service is provided only under a separate agreement and subject to applicable law."
-      - h: Intellectual property
-        p: "All content on the website, including text, graphics, logos and software, is owned by INORI or its licensors and may not be copied or used without prior written permission."
-      - h: Limitation of liability
-        p: "INORI makes reasonable efforts to keep the information accurate and up to date but does not guarantee its completeness or accuracy. INORI shall not be liable for any damage resulting from the use of the website or reliance on its content."
-      - h: External links
-        p: "The website may contain links to third-party websites. INORI is not responsible for their content or privacy practices."
-      - h: Changes
-        p: "INORI may update these terms and the website content at any time without prior notice."
-      - h: Governing law
-        p: "These terms are governed by the laws of the State of Israel. The competent courts in Israel shall have exclusive jurisdiction."
+    - h: General
+      p: This website is operated by INORI Finance Ltd. ("INORI"). By using the website you agree to these terms. If you do not agree, please do not use the website.
+    - h: Information only
+      p: The content of the website is provided for general information only. It does not constitute investment, financial, legal, tax or credit advice, nor an offer or solicitation to purchase any financial product. Any service is provided only under a separate agreement and subject to applicable law.
+    - h: Intellectual property
+      p: All content on the website, including text, graphics, logos and software, is owned by INORI or its licensors and may not be copied or used without prior written permission.
+    - h: Limitation of liability
+      p: INORI makes reasonable efforts to keep the information accurate and up to date but does not guarantee its completeness or accuracy. INORI shall not be liable for any damage resulting from the use of the website or reliance on its content.
+    - h: External links
+      p: The website may contain links to third-party websites. INORI is not responsible for their content or privacy practices.
+    - h: Changes
+      p: INORI may update these terms and the website content at any time without prior notice.
+    - h: Governing law
+      p: These terms are governed by the laws of the State of Israel. The competent courts in Israel shall have exclusive jurisdiction.
   privacy:
     title: Privacy policy
     sections:
-      - h: Who we are
-        p: "INORI Finance Ltd., Petah Tikva, Israel, is responsible for the personal information collected through this website."
-      - h: What we collect
-        p: "When you contact us we collect the details you provide — such as name, company, e-mail, phone and message. We may also collect basic technical information needed to operate the website."
-      - h: How we use it
-        p: "We use your details only to respond to your inquiry, to provide our services and to comply with legal obligations. We do not sell your information."
-      - h: Sharing
-        p: "We do not share your details with third parties without your consent, except with service providers that help us operate the website, or where required by law."
-      - h: Cookies
-        p: "The website uses only cookies and local storage that are necessary for its operation, such as remembering your language choice."
-      - h: Your rights
-        p: "You may request to access, correct or delete your personal information under the Israeli Privacy Protection Law. To do so, contact us at kobis@inori.co.il."
+    - h: Who we are
+      p: INORI Finance Ltd., Petah Tikva, Israel, is responsible for the personal information collected through this website.
+    - h: What we collect
+      p: When you contact us we collect the details you provide, such as your name, company, e-mail, phone and message. We may also collect basic technical information needed to operate the website.
+    - h: How we use it
+      p: We use your details only to respond to your inquiry, to provide our services and to comply with legal obligations. We do not sell your information.
+    - h: Sharing
+      p: We do not share your details with third parties without your consent, except with service providers that help us operate the website, or where required by law.
+    - h: Cookies
+      p: The website uses only cookies and local storage that are necessary for its operation, such as remembering your language choice.
+    - h: Your rights
+      p: You may request to access, correct or delete your personal information under the Israeli Privacy Protection Law. To do so, contact us at kobis@inori.co.il.
   accessibility:
     title: Accessibility statement
     sections:
-      - h: Our commitment
-        p: "INORI is committed to making its website accessible to all users, including people with disabilities, in accordance with the Equal Rights for Persons with Disabilities (Service Accessibility Adjustments) Regulations, 2013."
-      - h: Accessibility level
-        p: "The website was designed to comply with Israeli Standard IS 5568, based on WCAG 2.0 at level AA. It supports keyboard navigation, screen readers, text resizing, sufficient colour contrast and descriptive alternative text."
-      - h: Limitations
-        p: "Despite our efforts, some content — such as third-party videos or external documents — may not yet be fully accessible. We are working to improve it continuously."
-      - h: Contact the accessibility coordinator
-        p: "If you encounter an accessibility issue, please contact us at kobis@inori.co.il or 054-592-0898 and we will do our best to resolve it promptly."
+    - h: Our commitment
+      p: INORI is committed to making its website accessible to all users, including people with disabilities, in accordance with the Equal Rights for Persons with Disabilities (Service Accessibility Adjustments) Regulations, 2013.
+    - h: Accessibility level
+      p: The website was designed to comply with Israeli Standard IS 5568, based on WCAG 2.0 at level AA. It supports keyboard navigation, screen readers, text resizing, sufficient colour contrast and descriptive alternative text.
+    - h: Limitations
+      p: Despite our efforts, some content, such as third-party videos or external documents, may not yet be fully accessible. We are working to improve it continuously.
+    - h: Contact the accessibility coordinator
+      p: If you encounter an accessibility issue, please contact us at kobis@inori.co.il or 054-592-0898 and we will do our best to resolve it promptly.
   regulatory:
     title: Regulatory information
     sections:
-      - h: Licensing
-        p: "INORI Finance Ltd. operates with the approval of the Israel Capital Market Authority under licenses No. 70208 and 70210."
-      - h: Nature of the information
-        p: "The information on this website is general and is not a substitute for advice that takes into account your specific circumstances. Services are provided only under an agreement and subject to applicable regulation."
-      - h: Complaints
-        p: "Inquiries and complaints may be sent to kobis@inori.co.il."
-
+    - h: Licensing
+      p: INORI Finance Ltd. operates with the approval of the Israel Capital Market Authority under licenses No. 70208 and 70210.
+    - h: Nature of the information
+      p: The information on this website is general and is not a substitute for advice that takes into account your specific circumstances. Services are provided only under an agreement and subject to applicable regulation.
+    - h: Complaints
+      p: Inquiries and complaints may be sent to kobis@inori.co.il.
 notfound:
   title: Page not found
-  text: "The page you are looking for doesn't exist or has moved."
+  text: The page you are looking for doesn't exist or has moved.

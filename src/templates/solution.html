@@ -2,8 +2,8 @@
 {% from "_macros.html" import pic, icon, arrow %}
 {% from "_hero.html" import hero with context %}
 {% block main %}
-{% set s = t.solutions[key] %}
-{{ hero('solutions_' ~ key, s.hero, true, (t.common.get_started, u('contact/')), (t.nav.product, u('dpn/'))) }}
+{% set s = t.solutions[key] %}{% set imgkey = {'buyers':'payers','suppliers':'suppliers'}[key] %}
+{{ hero('solutions_' ~ imgkey, s.hero, true, (t.common.get_started, u('contact/')), (t.nav.product, u('dpn/'))) }}
 
 <section class="section section--white">
   <div class="container">
@@ -13,7 +13,7 @@
         <h2>{{ s.hero.title }}</h2>
         <p>{{ s.intro }}</p>
       </div>
-      <div class="split__media">{{ pic('home_audience-' ~ key, '', '', '(max-width:860px) 100vw, 50vw') }}</div>
+      <div class="split__media">{{ pic('home_audience-' ~ imgkey, '', '', '(max-width:860px) 100vw, 50vw') }}</div>
     </div>
   </div>
 </section>
@@ -40,8 +40,8 @@
     <div class="section__head reveal"><span class="eyebrow">{{ t.home.audiences.eyebrow }}</span><h2>{{ t.home.audiences.title }}</h2></div>
     <div class="cards3">
       {% for a in t.home.audiences['items'] if a.key != key %}
-      <a class="acard reveal" href="{{ u('solutions/' ~ a.key ~ '/') }}">
-        <div class="acard__img">{{ pic('home_audience-' ~ a.key, '', '', '(max-width:900px) 100vw, 33vw') }}</div>
+      <a class="acard reveal" href="{{ u(a.url) }}">
+        <div class="acard__img">{{ pic(a.img, '', '', '(max-width:900px) 100vw, 33vw') }}</div>
         <div class="acard__body"><small>{{ a.subtitle }}</small><h3>{{ a.title }}</h3><p>{{ a.text }}</p><span class="link-arrow">{{ t.common.learn_more }} {{ arrow() }}</span></div>
       </a>
       {% endfor %}

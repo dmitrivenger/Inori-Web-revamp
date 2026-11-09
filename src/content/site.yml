@@ -21,7 +21,7 @@ social:
   facebook: "https://www.facebook.com/profile.php?id=61577833150114"
   instagram: "https://www.instagram.com/inori_finance"
 
-# DPN explainer video (currently hosted on the old WordPress site — move to assets/video before switching off WordPress)
+# DPN explainer video (currently hosted on the old WordPress site, move to assets/video before switching off WordPress)
 dpn_video: "https://inori.co.il/wp-content/uploads/2026/01/WhatsApp-Video-2026-01-18-at-12.05.57.mp4"
 
 team:
@@ -46,7 +46,7 @@ press:
   - { outlet: "Bizzness",       lang: HE, url: "https://bizzness.net/%D7%91%D7%A9%D7%95%D7%A8%D7%94-%D7%9C%D7%A9%D7%95%D7%A7-%D7%94%D7%98%D7%9B%D7%A0%D7%95%D7%9C%D7%95%D7%92%D7%99%D7%94-%D7%97%D7%91%D7%A8%D7%AA-%D7%94%D7%A4%D7%99%D7%A0%D7%98%D7%A7-%D7%94%D7%A2%D7%95/" }
   - { outlet: "TV10",           lang: HE, url: "https://tv10.co.il/coins/39791/" }
 
-# Videos (also on the old WordPress host — move to assets/video before switching off WordPress)
+# Videos (also on the old WordPress host, move to assets/video before switching off WordPress)
 videos:
   - { id: soramitsu, url: "https://inori.co.il/wp-content/uploads/2025/07/%D7%A1%D7%95%D7%A8%D7%9E%D7%99%D7%A6%D7%95-%D7%9E%D7%92%D7%99%D7%A2%D7%94-%D7%9C%D7%90%D7%A8%D7%A5-.mp4" }
   - { id: china,     url: "https://inori.co.il/wp-content/uploads/2025/07/%D7%A1%D7%99%D7%9F.mp4" }

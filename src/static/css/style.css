@@ -332,3 +332,16 @@ html[lang="he"] .footer h4{letter-spacing:.02em;font-size:.95rem}
   *{transition-duration:.01ms!important;animation-duration:.01ms!important}
 }
 .no-js .reveal{opacity:1;transform:none}
+
+/* DPN lifecycle */
+.lifecycle{margin-top:clamp(48px,6vw,80px);background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(24px,4vw,40px)}
+.lifecycle h3{margin-bottom:20px}
+.lifecycle ol{list-style:none;margin:0 0 16px;padding:0;display:flex;flex-wrap:wrap;gap:10px;counter-reset:st}
+.lifecycle li{counter-increment:st;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px 8px 8px;font-weight:600;font-size:.95rem}
+html[dir="rtl"] .lifecycle li{padding:8px 8px 8px 16px}
+.lifecycle li::before{content:counter(st);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--indigo),var(--peri));color:#fff;font-size:.8rem}
+.lifecycle p{color:var(--muted);margin:0;font-size:.95rem}
+.flow--titled li strong{display:block;margin-bottom:6px;font-size:1.05rem}
+.flow--titled li span{display:block;color:var(--muted);font-weight:400;font-size:.96rem}
+.note{color:var(--muted);margin-top:24px;max-width:760px;font-size:.95rem}
+.section--dark .mockup{aspect-ratio:16/10}

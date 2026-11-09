@@ -35,7 +35,7 @@
       <div class="nav__item">
         <button class="nav__drop" type="button" aria-expanded="false" aria-haspopup="true">{{ t.nav.solutions }} {{ svg('chevron') }}</button>
         <div class="nav__menu">
-          {% for k in ['payers','suppliers','funders'] %}
+          {% for k in ['suppliers','buyers'] %}
           <a href="{{ u('solutions/' ~ k ~ '/') }}" {% if page_id==k %}aria-current="page"{% endif %}><span>{{ t.nav[k] }}{% for a in t.home.audiences['items'] if a.key==k %}<small>{{ a.subtitle }}</small>{% endfor %}</span></a>
           {% endfor %}
         </div>
@@ -82,9 +82,8 @@
         <h4>{{ t.footer.explore }}</h4>
         <ul>
           <li><a href="{{ u('dpn/') }}">{{ t.nav.product }}</a></li>
-          <li><a href="{{ u('solutions/payers/') }}">{{ t.nav.payers }}</a></li>
           <li><a href="{{ u('solutions/suppliers/') }}">{{ t.nav.suppliers }}</a></li>
-          <li><a href="{{ u('solutions/funders/') }}">{{ t.nav.funders }}</a></li>
+          <li><a href="{{ u('solutions/buyers/') }}">{{ t.nav.buyers }}</a></li>
           <li><a href="{{ u('services/') }}">{{ t.nav.services }}</a></li>
         </ul>
       </div>

@@ -3,7 +3,7 @@
 {% from "_hero.html" import hero with context %}
 {% block main %}
 {% set d = t.dpn %}
-{{ hero('dpn_hero', d.hero, true, (t.common.get_started, u('contact/')), none, (t.common.watch_video, S.dpn_video)) }}
+{{ hero('dpn_hero', d.hero, true, (t.home.cta.button, u('contact/')), none, (t.common.watch_video, S.dpn_video)) }}
 
 <section class="section section--white">
   <div class="container">
@@ -19,10 +19,15 @@
         <span class="video-card__label">{{ d.video.title }}</span>
       </button>
     </div>
+    <div class="lifecycle reveal">
+      <h3>{{ d.what.states_title }}</h3>
+      <ol>{% for st in d.what.states %}<li>{{ st }}</li>{% endfor %}</ol>
+      <p>{{ d.what.states_note }}</p>
+    </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="how">
   <div class="container">
     <div class="section__head section__head--center reveal">
       <span class="eyebrow">{{ t.home.how.eyebrow }}</span>
@@ -41,25 +46,42 @@
 
 <section class="section section--white">
   <div class="container">
-    <div class="section__head reveal"><span class="eyebrow">{{ d.benefits.eyebrow }}</span></div>
-    <div class="features">
-      {% for b in d.benefits['items'] %}
+    <div class="section__head reveal"><span class="eyebrow">{{ d.modes.eyebrow }}</span><h2>{{ d.modes.title }}</h2></div>
+    <div class="features features--3">
+      {% for b in d.modes['items'] %}
       <div class="feature reveal"><div class="feature__icon">{{ icon(b.icon) }}</div><h3>{{ b.title }}</h3><p>{{ b.text }}</p></div>
       {% endfor %}
     </div>
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <div class="split reveal">
+      <div class="split__text">
+        <h2>{{ d.benefits.supplier_title }}</h2>
+        <ul class="checks">{% for p in d.benefits.supplier %}<li>{{ p }}</li>{% endfor %}</ul>
+        <p style="margin-top:20px"><a class="link-arrow" href="{{ u('solutions/suppliers/') }}">{{ t.common.learn_more }} {{ arrow() }}</a></p>
+      </div>
+      <div class="split__text">
+        <h2>{{ d.benefits.buyer_title }}</h2>
+        <ul class="checks">{% for p in d.benefits.buyer %}<li>{{ p }}</li>{% endfor %}</ul>
+        <p style="margin-top:20px"><a class="link-arrow" href="{{ u('solutions/buyers/') }}">{{ t.common.learn_more }} {{ arrow() }}</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section section--dark">
   <div class="container">
-    <div class="section__head reveal">
-      <span class="eyebrow">{{ d.platform.eyebrow }}</span>
-      <h2>{{ d.platform.title }}</h2>
-      <p>{{ d.platform.text }}</p>
-    </div>
-    <div class="mockups reveal">
-      <div class="mockup">{{ pic('dpn_mockup-laptop', t.common.coming_soon, '', '(max-width:760px) 100vw, 66vw') }}<span class="mockup__badge">{{ t.common.coming_soon }}</span></div>
-      <div class="mockup">{{ pic('dpn_mockup-phone', t.common.coming_soon, '', '(max-width:760px) 100vw, 33vw') }}</div>
+    <div class="split reveal">
+      <div class="split__text">
+        <span class="eyebrow">{{ d.platform.eyebrow }}</span>
+        <h2>{{ d.platform.title }}</h2>
+        <p>{{ d.platform.text }}</p>
+        <ul class="checks">{% for f in d.platform.features %}<li>{{ f }}</li>{% endfor %}</ul>
+      </div>
+      <div class="mockup">{{ pic('dpn_mockup-laptop', t.common.coming_soon, '', '(max-width:860px) 100vw, 50vw') }}<span class="mockup__badge">{{ t.common.coming_soon }}</span></div>
     </div>
   </div>
 </section>
@@ -80,22 +102,19 @@
 
 <section class="section">
   <div class="container">
-    <div class="section__head reveal"><span class="eyebrow">{{ t.home.audiences.eyebrow }}</span><h2>{{ t.home.audiences.title }}</h2></div>
-    <div class="cards3">
-      {% for a in t.home.audiences['items'] %}
-      <a class="acard reveal" href="{{ u('solutions/' ~ a.key ~ '/') }}">
-        <div class="acard__img">{{ pic('home_audience-' ~ a.key, '', '', '(max-width:900px) 100vw, 33vw') }}</div>
-        <div class="acard__body"><small>{{ a.subtitle }}</small><h3>{{ a.title }}</h3><p>{{ a.text }}</p><span class="link-arrow">{{ t.common.learn_more }} {{ arrow() }}</span></div>
-      </a>
-      {% endfor %}
-    </div>
+    <div class="section__head reveal"><span class="eyebrow">{{ d.onboarding.eyebrow }}</span><h2>{{ d.onboarding.title }}</h2></div>
+    <ol class="flow flow--titled reveal">{% for s in d.onboarding.steps %}<li><strong>{{ s.title }}</strong><span>{{ s.text }}</span></li>{% endfor %}</ol>
+    <p class="note reveal">{{ d.onboarding.note }}</p>
   </div>
 </section>
 
 <section class="section section--white">
   <div class="container">
     <div class="section__head section__head--center reveal"><span class="eyebrow">{{ t.home.faq.eyebrow }}</span><h2>{{ t.home.faq.title }}</h2></div>
-    <div class="faq reveal">{% for f in t.home.faq['items'][:3] %}<details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>{% endfor %}</div>
+    <div class="faq reveal">
+      {% for f in t.home.faq['items'][:4] %}<details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>{% endfor %}
+      {% for f in d.faq %}<details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>{% endfor %}
+    </div>
   </div>
 </section>
 {% include "_cta.html" %}

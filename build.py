@@ -21,9 +21,8 @@ BASE_PATH = S.get("base_path", "/")  # set to "/repo-name/" if hosted in a sub-f
 PAGES = [
     ("home", "", "home.html", {}, "home"),
     ("dpn", "dpn/", "dpn.html", {}, "dpn"),
-    ("payers", "solutions/payers/", "solution.html", {"key": "payers"}, ("solutions", "payers")),
     ("suppliers", "solutions/suppliers/", "solution.html", {"key": "suppliers"}, ("solutions", "suppliers")),
-    ("funders", "solutions/funders/", "solution.html", {"key": "funders"}, ("solutions", "funders")),
+    ("buyers", "solutions/buyers/", "solution.html", {"key": "buyers"}, ("solutions", "buyers")),
     ("services", "services/", "services.html", {}, "services"),
     ("technology", "technology/", "technology.html", {}, "technology"),
     ("about", "about/", "about.html", {}, "about"),
@@ -38,9 +37,9 @@ PAGES = [
 
 # Old WordPress URLs -> new pages (static redirect stubs)
 OLD = {
-    "he": {"אודות/": "about/", "board/": "about/", "שיתופי-פעולה/": "solutions/funders/", "צור-קשר/": "contact/",
+    "he": {"אודות/": "about/", "board/": "about/", "שיתופי-פעולה/": "contact/", "צור-קשר/": "contact/",
            "תקנון-אתר/": "legal/terms/", "privacy-policy/": "legal/privacy/"},
-    "en": {"אודות/": "about/", "board/": "about/", "שיתופי-פעולה/": "solutions/funders/", "צור-קשר/": "contact/",
+    "en": {"אודות/": "about/", "board/": "about/", "שיתופי-פעולה/": "contact/", "צור-קשר/": "contact/",
            "תקנון-אתר/": "legal/terms/", "privacy-policy/": "legal/privacy/"},
 }
 

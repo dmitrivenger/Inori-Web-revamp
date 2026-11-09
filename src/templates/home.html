@@ -56,8 +56,8 @@
     </div>
     <div class="cards3">
       {% for a in h.audiences['items'] %}
-      <a class="acard reveal" href="{{ u('solutions/' ~ a.key ~ '/') }}">
-        <div class="acard__img">{{ pic('home_audience-' ~ a.key, '', '', '(max-width:900px) 100vw, 33vw') }}</div>
+      <a class="acard reveal" href="{{ u(a.url) }}">
+        <div class="acard__img">{{ pic(a.img, '', '', '(max-width:900px) 100vw, 33vw') }}</div>
         <div class="acard__body"><small>{{ a.subtitle }}</small><h3>{{ a.title }}</h3><p>{{ a.text }}</p><span class="link-arrow">{{ t.common.learn_more }} {{ arrow() }}</span></div>
       </a>
       {% endfor %}
