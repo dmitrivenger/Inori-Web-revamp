@@ -4,9 +4,7 @@ base_url: "https://inori.co.il"      # used for canonical / hreflang / sitemap
 default_lang: he
 languages: [he, en, ru]
 
-# Contact form: paste a form-backend URL here (e.g. Formspree "https://formspree.io/f/xxxx").
-# While empty, the form opens the visitor's e-mail app with the message pre-filled.
-form_endpoint: ""
+# Contact form: opens the visitor's e-mail app (mailto) addressed to contact.email
 
 contact:
   email: kobis@inori.co.il

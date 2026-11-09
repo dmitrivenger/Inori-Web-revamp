@@ -28,19 +28,15 @@ PAGES = [
     ("about", "about/", "about.html", {}, "about"),
     ("press", "press/", "press.html", {}, "press"),
     ("contact", "contact/", "contact.html", {}, "contact"),
-    ("thanks", "contact/thanks/", "thanks.html", {}, None),
-    ("terms", "legal/terms/", "legal.html", {"key": "terms"}, None),
-    ("privacy", "legal/privacy/", "legal.html", {"key": "privacy"}, None),
-    ("accessibility", "legal/accessibility/", "legal.html", {"key": "accessibility"}, None),
-    ("regulatory", "legal/regulatory/", "legal.html", {"key": "regulatory"}, None),
+    ("terms", "legal/terms/", "legal.html", {"key": "terms", "only": ["he"]}, None),  # legal pages exist in Hebrew only
 ]
 
 # Old WordPress URLs -> new pages (static redirect stubs)
 OLD = {
-    "he": {"אודות/": "about/", "board/": "about/", "שיתופי-פעולה/": "contact/", "צור-קשר/": "contact/",
-           "תקנון-אתר/": "legal/terms/", "privacy-policy/": "legal/privacy/"},
-    "en": {"אודות/": "about/", "board/": "about/", "שיתופי-פעולה/": "contact/", "צור-קשר/": "contact/",
-           "תקנון-אתר/": "legal/terms/", "privacy-policy/": "legal/privacy/"},
+    "he": {"אודות/": "he/about/", "board/": "he/about/", "שיתופי-פעולה/": "he/contact/", "צור-קשר/": "he/contact/",
+           "תקנון-אתר/": "he/legal/terms/", "privacy-policy/": "he/"},
+    "en": {"אודות/": "en/about/", "board/": "en/about/", "שיתופי-פעולה/": "en/contact/", "צור-קשר/": "en/contact/",
+           "תקנון-אתר/": "he/legal/terms/", "privacy-policy/": "en/"},
 }
 
 env = Environment(loader=FileSystemLoader(os.path.join(SRC, "templates")),
@@ -49,7 +45,8 @@ version = str(int(time.time()))
 CUR = {"rel": "../", "lang": "he"}          # state of the page being rendered
 def _u(p): return f"{CUR['rel']}{CUR['lang']}/{p}"
 def _asset(p): return f"{CUR['rel']}assets/{p}"
-env.globals.update(u=_u, asset=_asset)
+def _ul(lang, p): return f"{CUR['rel']}{lang}/{p}"
+env.globals.update(u=_u, asset=_asset, ul=_ul)
 
 def write(rel, html):
     p = os.path.join(OUT, rel)
@@ -65,14 +62,16 @@ def render_page(lang, page_id, path, template, extra, meta_key, absolute=False):
     CUR.update(rel=rel, lang=lang)
     u, asset = _u, _asset
     if meta_key is None:
-        sec = t["legal"].get(extra.get("key", ""), None)
-        title = (sec["title"] if sec else t["contact"]["thanks"]["title"]) + " | INORI Finance"
+        sec = t.get("legal", {}).get(extra.get("key", ""), None)
+        title = (sec["title"] if sec else t["notfound"]["title"]) + " | INORI Finance"
         desc = t["home"]["description"]
     else:
         m = t[meta_key] if isinstance(meta_key, str) else t[meta_key[0]][meta_key[1]]
         title, desc = m["title"], m["description"]
+    only = extra.get("only") or S["languages"]
     ctx = dict(t=t, S=S, L=lang, langs=LANGS, page_id=page_id, path=path, title=title, description=desc,
-               u=u, asset=asset, alt={l: f"{rel}{l}/{path}" for l in S["languages"]},
+               u=u, asset=asset, page_langs=only,
+               alt={l: f"{rel}{l}/{path}" if l in only else f"{rel}{l}/" for l in S["languages"]},
                version=version, year=datetime.date.today().year, **extra)
     return env.get_template(template).render(**ctx)
 
@@ -88,9 +87,10 @@ def main():
     urls = []
     for lang in S["languages"]:
         for page_id, path, tpl, extra, mk in PAGES:
+            if lang not in (extra.get("only") or S["languages"]):
+                continue
             write(f"{lang}/{path}index.html", render_page(lang, page_id, path, tpl, extra, mk))
-            if page_id != "thanks":
-                urls.append(f"{S['base_url']}/{lang}/{path}")
+            urls.append(f"{S['base_url']}/{lang}/{path}")
     # 404 (Hebrew, links to all languages) — uses absolute paths
     write("404.html", render_page("he", "404", "", "notfound.html", {"solid_header": False}, None, absolute=True)
           .replace("<title>", "<title>404 · "))
@@ -101,7 +101,7 @@ def main():
         for old, new in m.items():
             prefix = "" if lang == "he" else "en/"
             depth = (prefix + old).count("/")
-            write(f"{prefix}{old}index.html", redirect_html("../" * depth + f"{lang}/{new}"))
+            write(f"{prefix}{old}index.html", redirect_html("../" * depth + new))
     # sitemap + robots
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     sm += [f"  <url><loc>{u}</loc></url>" for u in urls] + ["</urlset>"]

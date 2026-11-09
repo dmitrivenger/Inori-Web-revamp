@@ -43,10 +43,7 @@ footer:
   rights: All rights reserved.
   location: Petah Tikva, Israel
 legal_nav:
-  terms: Terms of use
-  privacy: Privacy policy
-  accessibility: Accessibility statement
-  regulatory: Regulatory information
+  terms: Terms of use (in Hebrew)
 home:
   title: INORI Finance | NEVO, reverse factoring with Digital Payment Notes
   description: NEVO by INORI Finance turns a buyer-approved invoice into a Digital Payment Note (DPN). Suppliers can ask INORI for early payment, and the buyer still pays on the original due date.
@@ -233,7 +230,7 @@ dpn:
   - q: What if an invoice is paid late or disputed?
     a: That's covered by the agreements for that specific transaction, including who repays the advance and what happens while the dispute is sorted out. Go over these terms with INORI before you accept funding.
   - q: Who can see my company and invoice details?
-    a: Only authorised users have access in NEVO. To learn how INORI handles personal and company information, see our privacy policy or get in touch.
+    a: Only authorised users have access in NEVO. If you have questions about how your information is handled, get in touch with INORI.
   video:
     title: Watch the DPN video
     text: ''
@@ -412,11 +409,7 @@ contact:
       partner: Technology or business partner
       other: Other
     message: How can we help?
-    consent: I agree to the processing of my details in accordance with the
-    consent_link: privacy policy
     submit: Send
-    sending: Sending…
-    error: Something went wrong. Please try again or e-mail us directly.
     required: required
   details:
     title: Contact details
@@ -424,63 +417,6 @@ contact:
     phone: Phone
     whatsapp: WhatsApp
     location: Location
-  thanks:
-    title: Thank you, we've received your message.
-    text: We'll get back to you shortly to schedule a short introductory call.
-legal:
-  updated: 'Last updated: November 2026'
-  terms:
-    title: Terms of use
-    sections:
-    - h: General
-      p: This website is operated by INORI Finance Ltd. ("INORI"). By using the website you agree to these terms. If you do not agree, please do not use the website.
-    - h: Information only
-      p: The content of the website is provided for general information only. It does not constitute investment, financial, legal, tax or credit advice, nor an offer or solicitation to purchase any financial product. Any service is provided only under a separate agreement and subject to applicable law.
-    - h: Intellectual property
-      p: All content on the website, including text, graphics, logos and software, is owned by INORI or its licensors and may not be copied or used without prior written permission.
-    - h: Limitation of liability
-      p: INORI makes reasonable efforts to keep the information accurate and up to date but does not guarantee its completeness or accuracy. INORI shall not be liable for any damage resulting from the use of the website or reliance on its content.
-    - h: External links
-      p: The website may contain links to third-party websites. INORI is not responsible for their content or privacy practices.
-    - h: Changes
-      p: INORI may update these terms and the website content at any time without prior notice.
-    - h: Governing law
-      p: These terms are governed by the laws of the State of Israel. The competent courts in Israel shall have exclusive jurisdiction.
-  privacy:
-    title: Privacy policy
-    sections:
-    - h: Who we are
-      p: INORI Finance Ltd., Petah Tikva, Israel, is responsible for the personal information collected through this website.
-    - h: What we collect
-      p: When you contact us we collect the details you provide, such as your name, company, e-mail, phone and message. We may also collect basic technical information needed to operate the website.
-    - h: How we use it
-      p: We use your details only to respond to your inquiry, to provide our services and to comply with legal obligations. We do not sell your information.
-    - h: Sharing
-      p: We do not share your details with third parties without your consent, except with service providers that help us operate the website, or where required by law.
-    - h: Cookies
-      p: The website uses only cookies and local storage that are necessary for its operation, such as remembering your language choice.
-    - h: Your rights
-      p: You may request to access, correct or delete your personal information under the Israeli Privacy Protection Law. To do so, contact us at kobis@inori.co.il.
-  accessibility:
-    title: Accessibility statement
-    sections:
-    - h: Our commitment
-      p: INORI is committed to making its website accessible to all users, including people with disabilities, in accordance with the Equal Rights for Persons with Disabilities (Service Accessibility Adjustments) Regulations, 2013.
-    - h: Accessibility level
-      p: The website was designed to comply with Israeli Standard IS 5568, based on WCAG 2.0 at level AA. It supports keyboard navigation, screen readers, text resizing, sufficient colour contrast and descriptive alternative text.
-    - h: Limitations
-      p: Despite our efforts, some content, such as third-party videos or external documents, may not yet be fully accessible. We are working to improve it continuously.
-    - h: Contact the accessibility coordinator
-      p: If you encounter an accessibility issue, please contact us at kobis@inori.co.il or 054-592-0898 and we will do our best to resolve it promptly.
-  regulatory:
-    title: Regulatory information
-    sections:
-    - h: Licensing
-      p: INORI Finance Ltd. operates with the approval of the Israel Capital Market Authority under licenses No. 70208 and 70210.
-    - h: Nature of the information
-      p: The information on this website is general and is not a substitute for advice that takes into account your specific circumstances. Services are provided only under an agreement and subject to applicable regulation.
-    - h: Complaints
-      p: Inquiries and complaints may be sent to kobis@inori.co.il.
 notfound:
   title: Page not found
   text: The page you are looking for doesn't exist or has moved.

@@ -134,35 +134,29 @@
     modal.addEventListener("click", function (e) { if (e.target === modal) closeModal(); });
   }
 
-  /* Contact form: posts to the configured endpoint, or falls back to e-mail */
+  /* Contact form: opens the visitor's e-mail app with the message pre-filled */
   var form = document.querySelector("form[data-contact]");
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (form.querySelector(".hp input").value) return; // bot
       if (!form.reportValidity()) return;
-      var endpoint = form.getAttribute("data-endpoint");
-      var thanks = form.getAttribute("data-thanks");
-      var btn = form.querySelector("button[type=submit]");
-      var err = form.querySelector(".form__error");
-      var data = new FormData(form);
+      var get = function (n) { var el = form.elements[n]; return el ? el.value.trim() : ""; };
       var roleSel = form.querySelector("select[name=role]");
-      data.set("role_label", roleSel.options[roleSel.selectedIndex].text);
-      data.set("language", pageLang);
-      if (!endpoint) {
-        var body = ["name", "company", "email", "phone", "role_label", "message"].map(function (k) {
-          return k + ": " + (data.get(k) || "");
-        }).join("\n");
-        window.location.href = "mailto:" + form.getAttribute("data-mail") +
-          "?subject=" + encodeURIComponent("INORI website — " + (data.get("name") || "")) +
-          "&body=" + encodeURIComponent(body);
-        return;
-      }
-      btn.disabled = true; var label = btn.textContent; btn.textContent = btn.getAttribute("data-sending");
-      err.classList.remove("is-visible");
-      fetch(endpoint, { method: "POST", body: data, headers: { "Accept": "application/json" } })
-        .then(function (r) { if (!r.ok) throw new Error(r.status); window.location.href = thanks; })
-        .catch(function () { err.classList.add("is-visible"); btn.disabled = false; btn.textContent = label; });
+      var role = roleSel.selectedIndex > 0 ? roleSel.options[roleSel.selectedIndex].text : "";
+      var rows = [
+        [form.querySelector("label[for=f-name]"), get("name")],
+        [form.querySelector("label[for=f-company]"), get("company")],
+        [form.querySelector("label[for=f-email]"), get("email")],
+        [form.querySelector("label[for=f-phone]"), get("phone")],
+        [form.querySelector("label[for=f-role]"), role]
+      ].filter(function (r) { return r[1]; }).map(function (r) {
+        return r[0].firstChild.textContent.trim() + ": " + r[1];
+      });
+      var body = rows.join("\n") + (get("message") ? "\n\n" + get("message") : "");
+      window.location.href = "mailto:" + form.getAttribute("data-mail") +
+        "?subject=" + encodeURIComponent("INORI website: " + get("name")) +
+        "&body=" + encodeURIComponent(body);
     });
   }
 })();

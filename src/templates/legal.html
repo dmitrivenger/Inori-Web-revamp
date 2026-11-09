@@ -8,8 +8,15 @@
 </section>
 <section class="section section--white">
   <div class="container legal">
-    <p class="updated">{{ t.legal.updated }}</p>
-    {% for sec in s.sections %}<h2>{{ sec.h }}</h2><p>{{ sec.p }}</p>{% endfor %}
+    <p>{{ s.intro }}</p>
+    <ol class="legal__list">
+      {% for sec in s.sections %}
+      <li><h2>{{ sec.h }}</h2>
+        {% if sec.p %}<p>{{ sec.p }}</p>{% endif %}
+        {% if sec.get('items') %}<ul>{% for it in sec.get('items') %}<li>{{ it }}</li>{% endfor %}</ul>{% endif %}
+      </li>
+      {% endfor %}
+    </ol>
   </div>
 </section>
 {% endblock %}

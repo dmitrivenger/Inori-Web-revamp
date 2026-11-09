@@ -6,7 +6,7 @@
 <title>{{ title }}</title>
 <meta name="description" content="{{ description }}">
 <link rel="canonical" href="{{ S.base_url }}/{{ L }}/{{ path }}">
-{% for l in S.languages %}<link rel="alternate" hreflang="{{ l }}" href="{{ S.base_url }}/{{ l }}/{{ path }}">
+{% for l in (page_langs or S.languages) %}<link rel="alternate" hreflang="{{ l }}" href="{{ S.base_url }}/{{ l }}/{{ path }}">
 {% endfor %}<link rel="alternate" hreflang="x-default" href="{{ S.base_url }}/{{ S.default_lang }}/{{ path }}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{{ t.meta.site_name }}">
@@ -99,9 +99,7 @@
       <div>
         <h4>{{ t.footer.legal }}</h4>
         <ul>
-          {% for k in ['terms','privacy','accessibility','regulatory'] %}
-          <li><a href="{{ u('legal/' ~ k ~ '/') }}">{{ t.legal_nav[k] }}</a></li>
-          {% endfor %}
+          <li><a href="{{ ul('he', 'legal/terms/') }}" hreflang="he">{{ t.legal_nav.terms }}</a></li>
         </ul>
       </div>
     </div>

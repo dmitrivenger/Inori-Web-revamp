@@ -345,3 +345,8 @@ html[dir="rtl"] .lifecycle li{padding:8px 8px 8px 16px}
 .flow--titled li span{display:block;color:var(--muted);font-weight:400;font-size:.96rem}
 .note{color:var(--muted);margin-top:24px;max-width:760px;font-size:.95rem}
 .section--dark .mockup{aspect-ratio:16/10}
+.legal__list{padding-inline-start:1.4em;margin:0}
+.legal__list > li{margin-top:1.8em}
+.legal__list > li::marker{font-weight:700;color:var(--indigo)}
+.legal__list h2{display:inline;font-size:1.25rem}
+.legal__list ul{margin:.6em 0 0;padding-inline-start:1.2em;color:#353A5C}

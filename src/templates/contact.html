@@ -6,7 +6,7 @@
 {{ hero('contact_hero', c.hero, true) }}
 <section class="section">
   <div class="container contact-grid">
-    <form class="form reveal" data-contact data-endpoint="{{ S.form_endpoint }}" data-mail="{{ S.contact.email }}" data-thanks="{{ u('contact/thanks/') }}" method="post" novalidate>
+    <form class="form reveal" data-contact data-mail="{{ S.contact.email }}" novalidate>
       <div class="form__row">
         <div class="field"><label for="f-name">{{ c.form.name }} <span>*</span></label><input id="f-name" name="name" autocomplete="name" required></div>
         <div class="field"><label for="f-company">{{ c.form.company }}</label><input id="f-company" name="company" autocomplete="organization"></div>
@@ -22,9 +22,7 @@
         </select></div>
       <div class="field"><label for="f-msg">{{ c.form.message }}</label><textarea id="f-msg" name="message"></textarea></div>
       <div class="hp" aria-hidden="true"><input name="website" tabindex="-1" autocomplete="off"></div>
-      <label class="check"><input type="checkbox" name="consent" required> <span>{{ c.form.consent }} <a href="{{ u('legal/privacy/') }}">{{ c.form.consent_link }}</a>.</span></label>
-      <button class="btn btn--primary" type="submit" data-sending="{{ c.form.sending }}">{{ c.form.submit }}</button>
-      <p class="form__error" role="alert">{{ c.form.error }}</p>
+      <button class="btn btn--primary" type="submit">{{ c.form.submit }}</button>
     </form>
     <aside class="details reveal">
       <h3>{{ c.details.title }}</h3>

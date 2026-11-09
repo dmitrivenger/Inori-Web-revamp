@@ -98,12 +98,12 @@
     },
     {
       "source": "/privacy-policy",
-      "destination": "/he/legal/privacy/",
+      "destination": "/he/",
       "permanent": true
     },
     {
       "source": "/privacy-policy/",
-      "destination": "/he/legal/privacy/",
+      "destination": "/he/",
       "permanent": true
     },
     {
@@ -178,32 +178,32 @@
     },
     {
       "source": "/en/%D7%AA%D7%A7%D7%A0%D7%95%D7%9F-%D7%90%D7%AA%D7%A8",
-      "destination": "/en/legal/terms/",
+      "destination": "/he/legal/terms/",
       "permanent": true
     },
     {
       "source": "/en/%D7%AA%D7%A7%D7%A0%D7%95%D7%9F-%D7%90%D7%AA%D7%A8/",
-      "destination": "/en/legal/terms/",
+      "destination": "/he/legal/terms/",
       "permanent": true
     },
     {
       "source": "/en/תקנון-אתר",
-      "destination": "/en/legal/terms/",
+      "destination": "/he/legal/terms/",
       "permanent": true
     },
     {
       "source": "/en/תקנון-אתר/",
-      "destination": "/en/legal/terms/",
+      "destination": "/he/legal/terms/",
       "permanent": true
     },
     {
       "source": "/en/privacy-policy",
-      "destination": "/en/legal/privacy/",
+      "destination": "/en/",
       "permanent": true
     },
     {
       "source": "/en/privacy-policy/",
-      "destination": "/en/legal/privacy/",
+      "destination": "/en/",
       "permanent": true
     }
   ],
