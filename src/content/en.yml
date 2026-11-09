@@ -222,9 +222,12 @@ dpn:
     - title: Send it to INORI for review
       text: Once INORI approves your company, you can start adding invoices.
     note: An approved account or an approved invoice doesn't guarantee funding. INORI looks at every request and agrees the amount, fees and terms with you.
+    eligibility: Registration is currently open to Israeli limited companies (Ltd) only.
   faq:
   - q: What does the blockchain actually do?
     a: SORA Nexus, built on Hyperledger Iroha v3, is the ledger where each DPN's state and ownership are recorded. The money itself, INORI's funding and the buyer's payment, moves through regular bank transfers. The proof is then recorded and matched in NEVO.
+  - q: Who can join NEVO?
+    a: Right now, registration is open to Israeli limited companies (Ltd) only. You'll need your company registration and bank details, the work e-mail of an authorised representative, and the company, ownership and ID documents we ask for.
   - q: Can a supplier ask for factoring directly?
     a: Yes, if it owns an eligible, active DPN. The company needs to be verified, the other party has to agree, and INORI reviews the request before sending any money.
   - q: What if an invoice is paid late or disputed?
@@ -376,7 +379,7 @@ about:
     text: INORI is an Israeli financial services company operating with the approval of the Capital Market, Insurance and Savings Authority, under licences No. 70208 and 70210.
 press:
   title: Press & media | INORI
-  description: "INORI in the media: articles and videos."
+  description: 'INORI in the media: articles and videos.'
   hero:
     eyebrow: Press
     title: INORI in the media.

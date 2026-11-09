@@ -102,7 +102,7 @@
 
 <section class="section">
   <div class="container">
-    <div class="section__head reveal"><span class="eyebrow">{{ d.onboarding.eyebrow }}</span><h2>{{ d.onboarding.title }}</h2></div>
+    <div class="section__head reveal"><span class="eyebrow">{{ d.onboarding.eyebrow }}</span><h2>{{ d.onboarding.title }}</h2><p>{{ d.onboarding.eligibility }}</p></div>
     <ol class="flow flow--titled reveal">{% for s in d.onboarding.steps %}<li><strong>{{ s.title }}</strong><span>{{ s.text }}</span></li>{% endfor %}</ol>
     <p class="note reveal">{{ d.onboarding.note }}</p>
   </div>
