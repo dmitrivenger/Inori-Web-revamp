@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% from "_macros.html" import pic, icon, arrow, svg %}
+{% from "_hero.html" import hero with context %}
+{% block main %}
+{% set s = t.about %}
+{{ hero('company_about', s.hero, true) }}
+<section class="section section--white">
+  <div class="container">
+    <div class="split reveal">
+      <div class="split__text"><span class="eyebrow">{{ t.nav.about }}</span><h2>{{ s.story.title }}</h2>{% for p in s.story.paragraphs %}<p>{{ p }}</p>{% endfor %}</div>
+      <div class="split__media">{{ pic('technology_partnership', '', '', '(max-width:860px) 100vw, 50vw') }}</div>
+    </div>
+  </div>
+</section>
+<section class="section section--dark">
+  <div class="container"><p class="quote reveal">{{ s.hero.subtitle }}</p></div>
+</section>
+<section class="section" id="team">
+  <div class="container">
+    <div class="section__head reveal"><span class="eyebrow">{{ s.team.eyebrow }}</span><h2>{{ s.team.title }}</h2></div>
+    <div class="team">
+      {% for m in S.team %}{% set p = s.team.people[m.id] %}
+      <article class="person reveal">
+        <div class="person__img"><img src="{{ asset('img/team/' ~ m.id ~ '.webp') }}" alt="{{ p.name }}" width="800" height="800" loading="lazy"></div>
+        <div class="person__body"><h3>{{ p.name }}</h3><p>{{ p.role }}</p><a href="{{ m.linkedin }}" target="_blank" rel="noopener">{{ svg('linkedin') }} LinkedIn</a></div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<section class="section section--white">
+  <div class="container">
+    <div class="split split--rev reveal">
+      <div class="split__media">{{ pic('services_regulatory', '', '', '(max-width:860px) 100vw, 50vw') }}</div>
+      <div class="split__text"><span class="eyebrow">{{ t.nav.about }}</span><h2>{{ s.license.title }}</h2><p>{{ s.license.text }}</p><a class="link-arrow" href="{{ u('legal/regulatory/') }}">{{ t.legal_nav.regulatory }} {{ arrow() }}</a></div>
+    </div>
+  </div>
+</section>
+{% include "_cta.html" %}
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% from "_macros.html" import pic, icon, arrow %}
+{% from "_hero.html" import hero with context %}
+{% block main %}
+{% set s = t.services %}
+{{ hero('services_optimization', s.hero, true, (t.common.talk_to_us, u('contact/'))) }}
+<section class="section section--white">
+  <div class="container">
+    {% for it in s['items'] %}
+    <div class="split {% if loop.index is even %}split--rev{% endif %} reveal">
+      <div class="split__media">{{ pic(it.img, '', '', '(max-width:860px) 100vw, 50vw') }}</div>
+      <div class="split__text">
+        <span class="eyebrow">0{{ loop.index }}</span>
+        <h2>{{ it.title }}</h2>
+        <p>{{ it.text }}</p>
+        <ul class="checks">{% for p in it.points %}<li>{{ p }}</li>{% endfor %}</ul>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+<section class="section section--dark">
+  <div class="container">
+    <div class="section__head reveal"><span class="eyebrow">{{ t.home.principles.eyebrow }}</span><h2>{{ t.home.principles.title }}</h2><p>{{ s.note }}</p></div>
+    <div class="features">
+      {% for p in t.home.principles['items'] %}
+      <div class="feature reveal"><div class="feature__icon">{{ icon(p.icon) }}</div><h3>{{ p.title }}</h3><p>{{ p.text }}</p></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% include "_cta.html" %}
+{% endblock %}

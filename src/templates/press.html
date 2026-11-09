@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% from "_macros.html" import pic, arrow, play %}
+{% from "_hero.html" import hero with context %}
+{% block main %}
+{% set s = t.press %}
+{{ hero('company_press', s.hero, true) }}
+<section class="section">
+  <div class="container">
+    <div class="section__head reveal"><h2>{{ s.articles_title }}</h2></div>
+    <div class="press reveal">
+      {% for p in S.press %}<a href="{{ p.url }}" target="_blank" rel="noopener"><strong>{{ p.outlet }}</strong><span>{{ t.common.read_article }} <em>{{ p.lang }}</em></span></a>{% endfor %}
+    </div>
+  </div>
+</section>
+<section class="section section--white">
+  <div class="container">
+    <div class="section__head reveal"><h2>{{ s.videos_title }}</h2></div>
+    <div class="videos">
+      <button class="video-card reveal" type="button" data-video="{{ S.dpn_video }}">{{ pic('dpn_video-cover', '', '', '(max-width:560px) 100vw, 33vw') }}<span class="video-card__play"><span>{{ play() }}</span></span><span class="video-card__label">{{ t.dpn.video.title }}</span></button>
+      {% for v in S.videos %}
+      <button class="video-card reveal" type="button" data-video="{{ v.url }}">{{ pic('resources_video-cover', '', '', '(max-width:560px) 100vw, 33vw') }}<span class="video-card__play"><span>{{ play() }}</span></span><span class="video-card__label">{{ s.videos[v.id] }}</span></button>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% include "_cta.html" %}
+{% endblock %}

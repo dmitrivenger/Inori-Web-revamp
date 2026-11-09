@@ -1,0 +1,9 @@
+{% from "_macros.html" import pic, arrow %}
+<section class="section banner">
+  <div class="banner__bg">{{ pic('home_cta', '', '', '100vw') }}</div>
+  <div class="container reveal">
+    <h2>{{ t.home.cta.title }}</h2>
+    <p>{{ t.home.cta.text }}</p>
+    <div class="hero__actions"><a class="btn btn--primary" href="{{ u('contact/') }}">{{ t.home.cta.button }} {{ arrow() }}</a></div>
+  </div>
+</section>

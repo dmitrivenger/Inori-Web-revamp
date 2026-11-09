@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>INORI Finance</title>
+<meta name="description" content="{{ langs['he'].home.description }}">
+<link rel="canonical" href="{{ S.base_url }}/{{ S.default_lang }}/">
+{% for l in S.languages %}<link rel="alternate" hreflang="{{ l }}" href="{{ S.base_url }}/{{ l }}/">
+{% endfor %}<link rel="alternate" hreflang="x-default" href="{{ S.base_url }}/">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<meta name="theme-color" content="#070A1F">
+<script>
+/* Pick the language: 1) visitor's saved choice, 2) browser/OS language, 3) Hebrew */
+(function () {
+  var supported = {{ S.languages | tojson }}, lang = null;
+  try { lang = localStorage.getItem("inori-lang"); } catch (e) {}
+  if (supported.indexOf(lang) === -1) {
+    lang = null;
+    var list = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ""];
+    for (var i = 0; i < list.length && !lang; i++) {
+      var c = String(list[i]).toLowerCase().split("-")[0];
+      if (c === "iw") c = "he";
+      if (supported.indexOf(c) !== -1) lang = c;
+    }
+  }
+  location.replace((lang || "{{ S.default_lang }}") + "/" + location.search + location.hash);
+})();
+</script>
+<style>
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:#070A1F;color:#E6E8FF;font-family:Heebo,Inter,system-ui,Arial,sans-serif;text-align:center}
+img{height:44px;margin-bottom:28px}
+nav{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+a{color:#fff;text-decoration:none;padding:12px 22px;border:1px solid rgba(201,207,251,.3);border-radius:999px}
+a:hover{background:rgba(124,138,246,.2)}
+</style>
+</head>
+<body>
+<div>
+  <img src="assets/img/logo-light.png" alt="INORI Finance">
+  <nav>{% for l in S.languages %}<a href="{{ l }}/" lang="{{ l }}">{{ langs[l].meta.name }}</a>{% endfor %}</nav>
+</div>
+</body>
+</html>

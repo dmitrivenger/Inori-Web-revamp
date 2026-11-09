@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% from "_macros.html" import pic %}
+{% block main %}
+{% set s = t.legal[key] %}
+<section class="hero hero--page" style="min-height:360px">
+  <div class="hero__bg">{{ pic('legal_header', '', '', '100vw', true) }}</div>
+  <div class="container"><div class="hero__content"><span class="eyebrow">{{ t.footer.legal }}</span><h1>{{ s.title }}</h1></div></div>
+</section>
+<section class="section section--white">
+  <div class="container legal">
+    <p class="updated">{{ t.legal.updated }}</p>
+    {% for sec in s.sections %}<h2>{{ sec.h }}</h2><p>{{ sec.p }}</p>{% endfor %}
+  </div>
+</section>
+{% endblock %}

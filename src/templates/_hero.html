@@ -1,0 +1,20 @@
+{% from "_macros.html" import pic, arrow, play %}
+{% macro hero(img, h, page=true, primary=none, secondary=none, video=none) -%}
+<section class="hero{% if page %} hero--page{% endif %}">
+  <div class="hero__bg">{{ pic(img, "", "", "100vw", true) }}</div>
+  <div class="container">
+    <div class="hero__content reveal">
+      <span class="eyebrow">{{ h.eyebrow }}</span>
+      <h1>{{ h.title }}</h1>
+      {% if h.subtitle %}<p class="lead">{{ h.subtitle }}</p>{% endif %}
+      {% if primary or secondary or video %}
+      <div class="hero__actions">
+        {% if primary %}<a class="btn btn--primary" href="{{ primary[1] }}">{{ primary[0] }} {{ arrow() }}</a>{% endif %}
+        {% if secondary %}<a class="btn btn--ghost" href="{{ secondary[1] }}">{{ secondary[0] }}</a>{% endif %}
+        {% if video %}<button class="btn btn--ghost" type="button" data-video="{{ video[1] }}">{{ play() }} {{ video[0] }}</button>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{%- endmacro %}

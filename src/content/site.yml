@@ -1,0 +1,56 @@
+# Shared settings (same for all languages)
+
+base_url: "https://inori.co.il"      # used for canonical / hreflang / sitemap
+default_lang: he
+languages: [he, en, ru]
+
+# Contact form: paste a form-backend URL here (e.g. Formspree "https://formspree.io/f/xxxx").
+# While empty, the form opens the visitor's e-mail app with the message pre-filled.
+form_endpoint: ""
+
+contact:
+  email: kobis@inori.co.il
+  phone_display: "054-592-0898"
+  phone_intl: "+972545920898"
+  whatsapp: "972545920898"
+  company: "INORI Finance Ltd."
+  licenses: "70208, 70210"
+
+social:
+  linkedin: "https://www.linkedin.com/company/inori-ltd/"
+  facebook: "https://www.facebook.com/profile.php?id=61577833150114"
+  instagram: "https://www.instagram.com/inori_finance"
+
+# DPN explainer video (currently hosted on the old WordPress site — move to assets/video before switching off WordPress)
+dpn_video: "https://inori.co.il/wp-content/uploads/2026/01/WhatsApp-Video-2026-01-18-at-12.05.57.mp4"
+
+team:
+  - id: kobi
+    linkedin: "https://www.linkedin.com/in/kobi-shmueli-9a4756153/"
+  - id: makoto
+    linkedin: "https://www.linkedin.com/in/makoto-takemiya"
+  - id: emiliano
+    linkedin: "https://www.linkedin.com/in/emiliano-dlt"
+
+press:
+  - { outlet: "Calcalist",      lang: HE, url: "https://www.calcalist.co.il/calcalistech/article/hjl2xtw2el" }
+  - { outlet: "CTech by Calcalist", lang: EN, url: "https://www.calcalistech.com/ctechnews/article/biobvtkjw" }
+  - { outlet: "TheMarker",      lang: HE, url: "https://www.themarker.com/markets/2025-07-16/ty-article/.premium/00000198-0d9d-d62d-a7b9-7ddf3adc0000?gift=6b4abd13add145fa986af31a1dae6b88" }
+  - { outlet: "Israel Hayom",   lang: HE, url: "https://www.israelhayom.co.il/business/article/19191076" }
+  - { outlet: "Maariv",         lang: HE, url: "https://www.maariv.co.il/economy/israel/article-1245808" }
+  - { outlet: "Bizportal",      lang: HE, url: "https://www.bizportal.co.il/digital-currency/news/article/20019411" }
+  - { outlet: "ICE",            lang: HE, url: "https://www.ice.co.il/crypto/news/article/1074782" }
+  - { outlet: "ICE",            lang: HE, url: "https://www.ice.co.il/crypto/news/article/1090189" }
+  - { outlet: "Funder",         lang: HE, url: "https://www.funder.co.il/article/189106" }
+  - { outlet: "Funder",         lang: HE, url: "https://www.funder.co.il/article/189790" }
+  - { outlet: "Bizzness",       lang: HE, url: "https://bizzness.net/%D7%91%D7%A9%D7%95%D7%A8%D7%94-%D7%9C%D7%A9%D7%95%D7%A7-%D7%94%D7%98%D7%9B%D7%A0%D7%95%D7%9C%D7%95%D7%92%D7%99%D7%94-%D7%97%D7%91%D7%A8%D7%AA-%D7%94%D7%A4%D7%99%D7%A0%D7%98%D7%A7-%D7%94%D7%A2%D7%95/" }
+  - { outlet: "TV10",           lang: HE, url: "https://tv10.co.il/coins/39791/" }
+
+# Videos (also on the old WordPress host — move to assets/video before switching off WordPress)
+videos:
+  - { id: soramitsu, url: "https://inori.co.il/wp-content/uploads/2025/07/%D7%A1%D7%95%D7%A8%D7%9E%D7%99%D7%A6%D7%95-%D7%9E%D7%92%D7%99%D7%A2%D7%94-%D7%9C%D7%90%D7%A8%D7%A5-.mp4" }
+  - { id: china,     url: "https://inori.co.il/wp-content/uploads/2025/07/%D7%A1%D7%99%D7%9F.mp4" }
+  - { id: pa,        url: "https://inori.co.il/wp-content/uploads/2025/07/%D7%A8%D7%A9%D7%95%D7%AA-%D7%A4%D7%9C%D7%A1%D7%98%D7%99%D7%A0%D7%99%D7%AA.mp4" }
+  - { id: privacy,   url: "https://inori.co.il/wp-content/uploads/2025/07/%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%A9%D7%9C%D7%A0%D7%95.mp4" }
+  - { id: learning,  url: "https://inori.co.il/wp-content/uploads/2025/07/%D7%AA%D7%94%D7%9C%D7%99%D7%9A-%D7%9C%D7%9E%D7%99%D7%93%D7%94.mp4" }
+  - { id: update,    url: "https://inori.co.il/wp-content/uploads/2026/01/WhatsApp-Video-2026-01-18-at-12.01.34.mp4" }

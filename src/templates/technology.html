@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% from "_macros.html" import pic, icon, arrow %}
+{% from "_hero.html" import hero with context %}
+{% block main %}
+{% set s = t.technology %}
+{{ hero('technology_hero', s.hero, true) }}
+<section class="section section--white">
+  <div class="container">
+    <div class="section__head reveal"><span class="eyebrow">{{ s.ledger.eyebrow }}</span><h2>{{ s.ledger.title }}</h2><p>{{ s.ledger.text }}</p></div>
+    <div class="features features--3">
+      {% for p in s.ledger.points %}
+      <div class="feature reveal"><div class="feature__icon">{{ icon(p.icon) }}</div><h3>{{ p.title }}</h3><p>{{ p.text }}</p></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="split reveal">
+      <div class="split__media">{{ pic('dpn_security', '', '', '(max-width:860px) 100vw, 50vw') }}</div>
+      <div class="split__text"><span class="eyebrow">DLT</span><h2>{{ s.iroha.title }}</h2><p>{{ s.iroha.text }}</p></div>
+    </div>
+  </div>
+</section>
+<section class="section section--dark">
+  <div class="container">
+    <div class="split split--rev reveal">
+      <div class="split__media">{{ pic('technology_partnership', '', '', '(max-width:860px) 100vw, 50vw') }}</div>
+      <div class="split__text"><span class="eyebrow">{{ s.partnership.eyebrow }}</span><h2>{{ s.partnership.title }}</h2><p>{{ s.partnership.text }}</p></div>
+    </div>
+  </div>
+</section>
+{% include "_cta.html" %}
+{% endblock %}

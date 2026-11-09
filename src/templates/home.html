@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% from "_macros.html" import pic, icon, arrow, play %}
+{% from "_hero.html" import hero with context %}
+{% block main %}
+{% set h = t.home %}
+{{ hero('home_hero', h.hero, false, (h.hero.cta_primary, u('contact/')), (h.hero.cta_secondary, '#how')) }}
+
+<section class="trust" aria-label="Highlights">
+  <div class="container"><ul>{% for x in h.trust %}<li>{{ x }}</li>{% endfor %}</ul></div>
+</section>
+
+<section class="section section--white">
+  <div class="container">
+    <div class="split reveal">
+      <div class="split__media">{{ pic('home_problem', '', '', '(max-width:860px) 100vw, 50vw') }}</div>
+      <div class="split__text">
+        <span class="eyebrow">{{ h.problem.eyebrow }}</span>
+        <h2>{{ h.problem.title }}</h2>
+        <p>{{ h.problem.text }}</p>
+      </div>
+    </div>
+    <div class="split split--rev reveal">
+      <div class="split__media">{{ pic('home_solution', '', '', '(max-width:860px) 100vw, 50vw') }}</div>
+      <div class="split__text">
+        <span class="eyebrow">{{ h.solution.eyebrow }}</span>
+        <h2>{{ h.solution.title }}</h2>
+        <p>{{ h.solution.text }}</p>
+        <a class="link-arrow" href="{{ u('dpn/') }}">{{ t.nav.product }} {{ arrow() }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <div class="container">
+    <div class="section__head section__head--center reveal">
+      <span class="eyebrow">{{ h.how.eyebrow }}</span>
+      <h2>{{ h.how.title }}</h2>
+    </div>
+    <div class="steps">
+      {% for s in h.how.steps %}
+      <article class="step reveal">
+        <div class="step__img">{{ pic('home_step' ~ loop.index, '', '', '(max-width:560px) 100vw, (max-width:1000px) 50vw, 25vw') }}</div>
+        <div class="step__body"><span class="step__num"></span><h3>{{ s.title }}</h3><p>{{ s.text }}</p></div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--white">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">{{ h.audiences.eyebrow }}</span>
+      <h2>{{ h.audiences.title }}</h2>
+    </div>
+    <div class="cards3">
+      {% for a in h.audiences['items'] %}
+      <a class="acard reveal" href="{{ u('solutions/' ~ a.key ~ '/') }}">
+        <div class="acard__img">{{ pic('home_audience-' ~ a.key, '', '', '(max-width:900px) 100vw, 33vw') }}</div>
+        <div class="acard__body"><small>{{ a.subtitle }}</small><h3>{{ a.title }}</h3><p>{{ a.text }}</p><span class="link-arrow">{{ t.common.learn_more }} {{ arrow() }}</span></div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">{{ h.principles.eyebrow }}</span>
+      <h2>{{ h.principles.title }}</h2>
+    </div>
+    <div class="features">
+      {% for p in h.principles['items'] %}
+      <div class="feature reveal"><div class="feature__icon">{{ icon(p.icon) }}</div><h3>{{ p.title }}</h3><p>{{ p.text }}</p></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--white">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">{{ h.services.eyebrow }}</span>
+      <h2>{{ h.services.title }}</h2>
+      <p>{{ h.services.text }}</p>
+    </div>
+    <div class="cards3">
+      {% for s in t.services['items'] %}
+      <a class="acard reveal" href="{{ u('services/') }}">
+        <div class="acard__img" style="aspect-ratio:16/10">{{ pic(s.img, '', '', '(max-width:900px) 100vw, 33vw') }}</div>
+        <div class="acard__body"><h3>{{ s.title }}</h3><p>{{ s.text }}</p><span class="link-arrow">{{ t.common.learn_more }} {{ arrow() }}</span></div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">{{ h.press.eyebrow }}</span>
+      <h2>{{ h.press.title }}</h2>
+    </div>
+    <div class="press reveal">
+      {% for p in S.press[:8] %}
+      <a href="{{ p.url }}" target="_blank" rel="noopener"><strong>{{ p.outlet }}</strong><span>{{ t.common.read_article }} <em>{{ p.lang }}</em></span></a>
+      {% endfor %}
+    </div>
+    <p style="margin-top:28px"><a class="link-arrow" href="{{ u('press/') }}">{{ t.nav.press }} {{ arrow() }}</a></p>
+  </div>
+</section>
+
+<section class="section section--white">
+  <div class="container">
+    <div class="section__head section__head--center reveal">
+      <span class="eyebrow">{{ h.faq.eyebrow }}</span>
+      <h2>{{ h.faq.title }}</h2>
+    </div>
+    <div class="faq reveal">
+      {% for f in h.faq['items'] %}<details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>{% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include "_cta.html" %}
+{% endblock %}

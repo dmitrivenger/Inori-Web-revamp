@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>INORI Finance</title>
+<meta name="description" content="פלטפורמת ה-DPN של INORI הופכת התחייבויות תשלום לספקים לשטרי תשלום דיגיטליים על גבי בלוקצ&#39;יין — כך שספקים מקבלים תשלום מוקדם ומממנים משקיעים בחובות מאומתים.">
+<link rel="canonical" href="https://inori.co.il/he/">
+<link rel="alternate" hreflang="he" href="https://inori.co.il/he/">
+<link rel="alternate" hreflang="en" href="https://inori.co.il/en/">
+<link rel="alternate" hreflang="ru" href="https://inori.co.il/ru/">
+<link rel="alternate" hreflang="x-default" href="https://inori.co.il/">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<meta name="theme-color" content="#070A1F">
+<script>
+/* Pick the language: 1) visitor's saved choice, 2) browser/OS language, 3) Hebrew */
+(function () {
+  var supported = ["he", "en", "ru"], lang = null;
+  try { lang = localStorage.getItem("inori-lang"); } catch (e) {}
+  if (supported.indexOf(lang) === -1) {
+    lang = null;
+    var list = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ""];
+    for (var i = 0; i < list.length && !lang; i++) {
+      var c = String(list[i]).toLowerCase().split("-")[0];
+      if (c === "iw") c = "he";
+      if (supported.indexOf(c) !== -1) lang = c;
+    }
+  }
+  location.replace((lang || "he") + "/" + location.search + location.hash);
+})();
+</script>
+<style>
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:#070A1F;color:#E6E8FF;font-family:Heebo,Inter,system-ui,Arial,sans-serif;text-align:center}
+img{height:44px;margin-bottom:28px}
+nav{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+a{color:#fff;text-decoration:none;padding:12px 22px;border:1px solid rgba(201,207,251,.3);border-radius:999px}
+a:hover{background:rgba(124,138,246,.2)}
+</style>
+</head>
+<body>
+<div>
+  <img src="assets/img/logo-light.png" alt="INORI Finance">
+  <nav><a href="he/" lang="he">עברית</a><a href="en/" lang="en">English</a><a href="ru/" lang="ru">Русский</a></nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% from "_macros.html" import pic, icon, arrow %}
+{% from "_hero.html" import hero with context %}
+{% block main %}
+{% set s = t.solutions[key] %}
+{{ hero('solutions_' ~ key, s.hero, true, (t.common.get_started, u('contact/')), (t.nav.product, u('dpn/'))) }}
+
+<section class="section section--white">
+  <div class="container">
+    <div class="split reveal">
+      <div class="split__text">
+        <span class="eyebrow">{{ s.hero.eyebrow }}</span>
+        <h2>{{ s.hero.title }}</h2>
+        <p>{{ s.intro }}</p>
+      </div>
+      <div class="split__media">{{ pic('home_audience-' ~ key, '', '', '(max-width:860px) 100vw, 50vw') }}</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="features">
+      {% for b in s.benefits %}
+      <div class="feature reveal"><div class="feature__icon">{{ icon(b.icon) }}</div><h3>{{ b.title }}</h3><p>{{ b.text }}</p></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--white">
+  <div class="container">
+    <div class="section__head reveal"><h2>{{ s.flow_title }}</h2></div>
+    <ol class="flow reveal">{% for f in s.flow %}<li>{{ f }}</li>{% endfor %}</ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section__head reveal"><span class="eyebrow">{{ t.home.audiences.eyebrow }}</span><h2>{{ t.home.audiences.title }}</h2></div>
+    <div class="cards3">
+      {% for a in t.home.audiences['items'] if a.key != key %}
+      <a class="acard reveal" href="{{ u('solutions/' ~ a.key ~ '/') }}">
+        <div class="acard__img">{{ pic('home_audience-' ~ a.key, '', '', '(max-width:900px) 100vw, 33vw') }}</div>
+        <div class="acard__body"><small>{{ a.subtitle }}</small><h3>{{ a.title }}</h3><p>{{ a.text }}</p><span class="link-arrow">{{ t.common.learn_more }} {{ arrow() }}</span></div>
+      </a>
+      {% endfor %}
+      <a class="acard reveal" href="{{ u('dpn/') }}">
+        <div class="acard__img">{{ pic('dpn_hero', '', '', '(max-width:900px) 100vw, 33vw') }}</div>
+        <div class="acard__body"><small>DPN</small><h3>{{ t.nav.product }}</h3><p>{{ t.dpn.hero.subtitle }}</p><span class="link-arrow">{{ t.common.learn_more }} {{ arrow() }}</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+{% include "_cta.html" %}
+{% endblock %}

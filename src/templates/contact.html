@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% from "_macros.html" import pic, arrow, svg %}
+{% from "_hero.html" import hero with context %}
+{% block main %}
+{% set c = t.contact %}
+{{ hero('contact_hero', c.hero, true) }}
+<section class="section">
+  <div class="container contact-grid">
+    <form class="form reveal" data-contact data-endpoint="{{ S.form_endpoint }}" data-mail="{{ S.contact.email }}" data-thanks="{{ u('contact/thanks/') }}" method="post" novalidate>
+      <div class="form__row">
+        <div class="field"><label for="f-name">{{ c.form.name }} <span>*</span></label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="f-company">{{ c.form.company }}</label><input id="f-company" name="company" autocomplete="organization"></div>
+      </div>
+      <div class="form__row">
+        <div class="field"><label for="f-email">{{ c.form.email }} <span>*</span></label><input id="f-email" name="email" type="email" autocomplete="email" required dir="ltr"></div>
+        <div class="field"><label for="f-phone">{{ c.form.phone }}</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" dir="ltr"></div>
+      </div>
+      <div class="field"><label for="f-role">{{ c.form.role }} <span>*</span></label>
+        <select id="f-role" name="role" required>
+          <option value="" disabled selected></option>
+          {% for k, v in c.form.role_options.items() %}<option value="{{ k }}">{{ v }}</option>{% endfor %}
+        </select></div>
+      <div class="field"><label for="f-msg">{{ c.form.message }}</label><textarea id="f-msg" name="message"></textarea></div>
+      <div class="hp" aria-hidden="true"><input name="website" tabindex="-1" autocomplete="off"></div>
+      <label class="check"><input type="checkbox" name="consent" required> <span>{{ c.form.consent }} <a href="{{ u('legal/privacy/') }}">{{ c.form.consent_link }}</a>.</span></label>
+      <button class="btn btn--primary" type="submit" data-sending="{{ c.form.sending }}">{{ c.form.submit }}</button>
+      <p class="form__error" role="alert">{{ c.form.error }}</p>
+    </form>
+    <aside class="details reveal">
+      <h3>{{ c.details.title }}</h3>
+      <dl>
+        <div><dt>{{ c.details.email }}</dt><dd><a href="mailto:{{ S.contact.email }}">{{ S.contact.email }}</a></dd></div>
+        <div><dt>{{ c.details.phone }}</dt><dd><a href="tel:{{ S.contact.phone_intl }}" dir="ltr">{{ S.contact.phone_display }}</a></dd></div>
+        <div><dt>{{ c.details.whatsapp }}</dt><dd><a href="https://wa.me/{{ S.contact.whatsapp }}" target="_blank" rel="noopener" dir="ltr">{{ S.contact.phone_display }}</a></dd></div>
+        <div><dt>{{ c.details.location }}</dt><dd>{{ t.footer.location }}</dd></div>
+      </dl>
+      <p class="license">{{ t.footer.license }}</p>
+    </aside>
+  </div>
+</section>
+<section class="section section--white">
+  <div class="container">
+    <div class="section__head section__head--center reveal"><span class="eyebrow">{{ t.home.faq.eyebrow }}</span><h2>{{ t.home.faq.title }}</h2></div>
+    <div class="faq reveal">{% for f in t.home.faq['items'] %}<details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>{% endfor %}</div>
+  </div>
+</section>
+{% endblock %}

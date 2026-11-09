@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% from "_macros.html" import pic, arrow %}
+{% block main %}
+<section class="hero">
+  <div class="hero__bg">{{ pic('legal_404', '', '', '100vw', true) }}</div>
+  <div class="container"><div class="hero__content">
+    <span class="eyebrow">404</span><h1>{{ t.notfound.title }}</h1><p class="lead">{{ t.notfound.text }}</p>
+    <div class="hero__actions">{% for l in S.languages %}<a class="btn {% if l==L %}btn--primary{% else %}btn--ghost{% endif %}" href="{{ asset('../' ~ l ~ '/') }}" lang="{{ l }}">{{ langs[l].common.back_home }}</a>{% endfor %}</div>
+  </div></div>
+</section>
+{% endblock %}

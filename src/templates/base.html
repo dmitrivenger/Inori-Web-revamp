@@ -1,0 +1,136 @@
+{% from "_macros.html" import svg, arrow, pic %}<!DOCTYPE html>
+<html lang="{{ t.meta.lang }}" dir="{{ t.meta.dir }}" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ S.base_url }}/{{ L }}/{{ path }}">
+{% for l in S.languages %}<link rel="alternate" hreflang="{{ l }}" href="{{ S.base_url }}/{{ l }}/{{ path }}">
+{% endfor %}<link rel="alternate" hreflang="x-default" href="{{ S.base_url }}/{{ S.default_lang }}/{{ path }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ t.meta.site_name }}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:image" content="{{ S.base_url }}/assets/img/og.jpg">
+<meta property="og:locale" content="{{ t.meta.locale }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#070A1F">
+<link rel="icon" type="image/png" href="{{ asset('img/favicon.png') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="{{ asset('css/style.css') }}?v={{ version }}">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"INORI Finance","url":"{{ S.base_url }}","logo":"{{ S.base_url }}/assets/img/logo.png","email":"{{ S.contact.email }}","telephone":"{{ S.contact.phone_intl }}","address":{"@type":"PostalAddress","addressLocality":"Petah Tikva","addressCountry":"IL"},"sameAs":["{{ S.social.linkedin }}","{{ S.social.facebook }}","{{ S.social.instagram }}"]}</script>
+{% block head %}{% endblock %}
+</head>
+<body>
+<a class="skip" href="#main">{{ t.nav.skip }}</a>
+
+<header class="header{% if solid_header %} header--solid{% endif %}">
+  <div class="container">
+    <a class="logo" href="{{ u('') }}" aria-label="INORI Finance"><img src="{{ asset('img/logo-light.png') }}" alt="INORI Finance" width="91" height="34"></a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="{{ u('dpn/') }}" {% if page_id=='dpn' %}aria-current="page"{% endif %}>{{ t.nav.product }}</a>
+      <div class="nav__item">
+        <button class="nav__drop" type="button" aria-expanded="false" aria-haspopup="true">{{ t.nav.solutions }} {{ svg('chevron') }}</button>
+        <div class="nav__menu">
+          {% for k in ['payers','suppliers','funders'] %}
+          <a href="{{ u('solutions/' ~ k ~ '/') }}" {% if page_id==k %}aria-current="page"{% endif %}><span>{{ t.nav[k] }}{% for a in t.home.audiences['items'] if a.key==k %}<small>{{ a.subtitle }}</small>{% endfor %}</span></a>
+          {% endfor %}
+        </div>
+      </div>
+      <a href="{{ u('services/') }}" {% if page_id=='services' %}aria-current="page"{% endif %}>{{ t.nav.services }}</a>
+      <a href="{{ u('technology/') }}" {% if page_id=='technology' %}aria-current="page"{% endif %}>{{ t.nav.technology }}</a>
+      <a href="{{ u('about/') }}" {% if page_id=='about' %}aria-current="page"{% endif %}>{{ t.nav.about }}</a>
+      <a href="{{ u('press/') }}" {% if page_id=='press' %}aria-current="page"{% endif %}>{{ t.nav.press }}</a>
+      <a href="{{ u('contact/') }}" {% if page_id=='contact' %}aria-current="page"{% endif %}>{{ t.nav.contact }}</a>
+      <a class="btn btn--primary nav__cta" href="{{ u('contact/') }}">{{ t.nav.cta }}</a>
+    </nav>
+    <div class="header__actions">
+      <div class="lang">
+        <button class="lang__btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="{{ t.nav.language }}">{{ svg('globe') }}{{ t.meta.short }}</button>
+        <ul class="lang__menu">
+          {% for l in S.languages %}
+          <li><a href="{{ alt[l] }}" hreflang="{{ l }}" lang="{{ l }}" data-set-lang="{{ l }}" {% if l==L %}aria-current="true"{% endif %}>{{ langs[l].meta.name }} <span>{{ langs[l].meta.short }}</span></a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <a class="btn btn--primary" href="{{ u('contact/') }}">{{ t.nav.cta }}</a>
+      <button class="burger" type="button" aria-controls="nav" aria-expanded="false" aria-label="{{ t.nav.menu }}">{{ svg('burger') }}</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+{% block main %}{% endblock %}
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="{{ asset('img/logo-light.png') }}" alt="INORI Finance" width="96" height="36" loading="lazy">
+        <p>{{ t.footer.tagline }}</p>
+        <div class="social">
+          <a href="{{ S.social.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">{{ svg('linkedin') }}</a>
+          <a href="{{ S.social.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">{{ svg('facebook') }}</a>
+          <a href="{{ S.social.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">{{ svg('instagram') }}</a>
+        </div>
+      </div>
+      <div>
+        <h4>{{ t.footer.explore }}</h4>
+        <ul>
+          <li><a href="{{ u('dpn/') }}">{{ t.nav.product }}</a></li>
+          <li><a href="{{ u('solutions/payers/') }}">{{ t.nav.payers }}</a></li>
+          <li><a href="{{ u('solutions/suppliers/') }}">{{ t.nav.suppliers }}</a></li>
+          <li><a href="{{ u('solutions/funders/') }}">{{ t.nav.funders }}</a></li>
+          <li><a href="{{ u('services/') }}">{{ t.nav.services }}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>{{ t.footer.company }}</h4>
+        <ul>
+          <li><a href="{{ u('about/') }}">{{ t.nav.about }}</a></li>
+          <li><a href="{{ u('technology/') }}">{{ t.nav.technology }}</a></li>
+          <li><a href="{{ u('press/') }}">{{ t.nav.press }}</a></li>
+          <li><a href="{{ u('contact/') }}">{{ t.nav.contact }}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>{{ t.footer.legal }}</h4>
+        <ul>
+          {% for k in ['terms','privacy','accessibility','regulatory'] %}
+          <li><a href="{{ u('legal/' ~ k ~ '/') }}">{{ t.legal_nav[k] }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="license">{{ t.footer.license }}</p>
+      <p>{{ t.footer.disclaimer }}</p>
+      <p><span dir="ltr">© {{ year }} {{ S.contact.company }}</span> · {{ t.footer.location }} · {{ t.footer.rights }}</p>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/{{ S.contact.whatsapp }}" target="_blank" rel="noopener" aria-label="WhatsApp">{{ svg('whatsapp') }}</a>
+
+<div class="langbar" role="region" aria-label="{{ t.nav.language }}">
+  {% for l in S.languages if l != L %}
+  <div data-langbar="{{ l }}" hidden lang="{{ l }}" dir="{{ langs[l].meta.dir }}">
+    <p>{{ langs[l].common.lang_suggest }}</p>
+    <a class="btn btn--primary" href="{{ alt[l] }}" data-set-lang="{{ l }}">{{ langs[l].common.lang_suggest_btn }}</a>
+  </div>
+  {% endfor %}
+  <button class="langbar__x" type="button" aria-label="{{ t.common.dismiss }}">×</button>
+</div>
+
+<div class="modal" role="dialog" aria-modal="true" aria-label="Video">
+  <button class="modal__close" type="button">{{ t.common.close }} ×</button>
+  <video controls playsinline preload="none"></video>
+</div>
+
+<script src="{{ asset('js/main.js') }}?v={{ version }}" defer></script>
+</body>
+</html>
